@@ -9,7 +9,7 @@ const animateLineX = document.querySelector(".header__animation--lineX");
 window.addEventListener("load", () => {
   // Prevent animations to run before load
   body.classList.remove("preload");
-  animateLineY.style.transform = "scaleY(75)";
+  animateLineY.style.transform = "scaleY(76)";
   animateLineX.style.transform = "scaleX(75)";
   headerEnter.style.opacity = "1";
   headerLink.style.opacity = "1";
