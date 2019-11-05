@@ -3,6 +3,13 @@
   display: grid;
   grid-template-rows: 1fr 11rem;
   grid-template-columns: 1fr 18rem;
+  grid-gap: 4rem;
+  justify-content: center;
+  background-color: $color-secondary;
+  text-align: center;
+
+  padding-bottom: 8rem;
+  clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 
   &--img {
     display: block;
@@ -12,12 +19,30 @@
   }
 
   &--heading {
-    color: #fff;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     justify-self: center;
-    // position: absolute;
-    // bottom: 3rem;
-    // right: 2rem;
   }
+
+  &--me {
+    grid-column: 1 / -1;
+  }
+
+  &--cta {
+    grid-column: 1 / -1;
+    font-weight: 300;
+  }
+
+  &--logo {
+    grid-column: 1 / -1;
+    width: 18rem;
+    justify-self: center;
+  }
+}
+
+.priorities {
+  background-color: $color-primary;
+  height: 70vh;
+  margin-top: -10rem;
+  padding-top: 10rem;
 }

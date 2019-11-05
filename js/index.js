@@ -5,7 +5,7 @@ const headerLink = document.querySelector(".header__animation--link");
 const animateLineY = document.querySelector(".header__animation--lineY");
 const animateLineX = document.querySelector(".header__animation--lineX");
 
-//Events
+// Events
 window.addEventListener("load", () => {
   // Prevent animations to run before load
   body.classList.remove("preload");

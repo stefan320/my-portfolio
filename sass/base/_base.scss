@@ -49,6 +49,7 @@ html {
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%;
   font-family: $font-primary;
   scroll-behavior: smooth;
+  color: #fff;
 }
 
 // Prevent animations to run before load
@@ -59,6 +60,9 @@ html {
   -o-transition: none !important;
 }
 
-.header--logo {
-  // transform: scale(500);
+// Spaceing
+
+.pdx-sm {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
