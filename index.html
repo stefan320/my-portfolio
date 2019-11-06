@@ -13,6 +13,19 @@
   </head>
   <body class="preload">
     <header class="header">
+    <div class="navigation">
+      <input type="checkbox" name="navigation--toggle" id="navigation--toggle" class="navigation--toggle">
+      <label for="navigation--toggle" class="navigation--btn">&nbsp;</label>
+      <div class="navigation__background"></div>
+        <nav class="navigation__nav">       
+          <ul class="navigation__list">
+            <li class="navigation__list--item">About Me</li>
+            <li class="navigation__list--item">Priorities</li>
+            <li class="navigation__list--item">Projects</li>
+            <li class="navigation__list--item">Contact</li>
+          </ul>
+        </nav>
+    </div>
       <img
         src="/assets/icons/logo.svg"
         alt="Stefan Cutajar logo"
@@ -20,7 +33,7 @@
       />
       <div class="header__animation">
         <div class="header__animation--lineY"></div>
-        <a href="#" class="header__animation--enter">Enter</a>
+        <a href="#about" class="header__animation--enter">Enter</a>
         <a class="header__animation--link" href="#about"
           ><img
             class="header__animation--link--img"
@@ -39,7 +52,7 @@
           class="about--img"
         />
         <h1 class="heading-1 about--heading">Who is</br>Stefan?</h1>
-        <p class="paragraph pdx-md about--me">I am a Front-End Web Developer whose passion revolves around bringing designs to life through the use of for UI effects, animations and creating engaging, dynamic user experiences. All websites are responsive on all devices no matter what the size. I enjoy developing rich web experiences. When I get the chance, I enjoy travelling and exploring nature.</p>
+        <p class="paragraph about--me">I am a Front-End Web Developer whose passion revolves around bringing designs to life through the use of for UI effects, animations and creating engaging, dynamic user experiences. All websites are responsive on all devices no matter what the size. I enjoy developing rich web experiences. When I get the chance, I enjoy travelling and exploring nature.</p>
         <h2 class="heading-secondary pdx-md about--cta">Interested? Get in touch and<br> let’s make some magic!</h2>
         <img
         src="/assets/icons/logo.svg"
@@ -49,9 +62,25 @@
       </div>
 
       <div class="priorities">
-        <h1>TEXT</h1>
-        <h1>TEXT</h1>
-        <h1>TEXT</h1>
+          <div class="priorities__box">
+            <h2 class="heading-secondary">Fast</h2>
+            <img src="/assets/icons/icon-fast.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
+          </div>
+
+          <div class="priorities__box">
+            <h2 class="heading-secondary">Divers</h2>
+            <img src="/assets/icons/icon-responsive.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
+          </div>
+
+          <div class="priorities__box">
+              <h2 class="heading-secondary">Responsive</h2>
+              <img src="/assets/icons/icon-responsive.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
+          </div>
+
+            <div class="priorities__box">
+                <h2 class="heading-secondary">Dynamic</h2>
+                <img src="/assets/icons/icon-fast.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
+            </div>   
 
       </div>
     </main>

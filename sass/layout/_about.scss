@@ -25,6 +25,7 @@
   }
 
   &--me {
+    @include wrapper;
     grid-column: 1 / -1;
   }
 
@@ -38,11 +39,4 @@
     width: 18rem;
     justify-self: center;
   }
-}
-
-.priorities {
-  background-color: $color-primary;
-  height: 70vh;
-  margin-top: -10rem;
-  padding-top: 10rem;
 }

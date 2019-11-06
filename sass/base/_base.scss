@@ -62,7 +62,7 @@ html {
 
 // Spaceing
 
-.pdx-md {
+@mixin wrapper {
   padding-left: 3rem;
   padding-right: 3rem;
 }

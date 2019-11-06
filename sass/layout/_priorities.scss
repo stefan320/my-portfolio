@@ -1,0 +1,14 @@
+.priorities {
+  @include wrapper;
+  background-color: $color-primary;
+  margin-top: -10rem;
+  padding-top: 10rem;
+  height: 100%;
+
+  &__box {
+    max-width: 100%;
+    &--logo {
+      max-width: 100%;
+    }
+  }
+}
