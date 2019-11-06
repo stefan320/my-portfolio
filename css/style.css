@@ -60,18 +60,19 @@ html {
 
 .navigation {
   color: #fff;
-  position: fixed;
   top: 3rem;
   right: 2.6rem; }
   .navigation__background {
     width: 1vw;
     height: 1vh;
+    border-radius: 50%;
     background-color: #f47d20;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
     transform: scale(0);
     position: fixed;
+    top: 3rem;
     right: 3.5rem;
-    border-radius: 50%; }
+    z-index: 8; }
   .navigation--toggle {
     display: none; }
   .navigation--btn {
@@ -81,7 +82,8 @@ html {
     background-color: #fff;
     width: 23px;
     height: 2px;
-    z-index: 9; }
+    z-index: 9;
+    cursor: pointer; }
     .navigation--btn::before, .navigation--btn::after {
       display: block;
       content: "";
@@ -136,6 +138,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   background-color: #09192f;
   background-image: url("../assets/icons/line-pattern.svg");
   background-size: cover;

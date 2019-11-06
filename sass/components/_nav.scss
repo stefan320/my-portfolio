@@ -1,18 +1,19 @@
 .navigation {
   color: #fff;
-  position: fixed;
   top: 3rem;
   right: 2.6rem;
 
   &__background {
     width: 1vw;
     height: 1vh;
+    border-radius: 50%;
     background-color: $color-secondary;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
     transform: scale(0);
     position: fixed;
+    top: 3rem;
     right: 3.5rem;
-    border-radius: 50%;
+    z-index: 8;
   }
 
   &--toggle {
@@ -27,6 +28,7 @@
     width: 23px;
     height: 2px;
     z-index: 9;
+    cursor: pointer;
 
     &::before,
     &::after {

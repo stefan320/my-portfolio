@@ -3,10 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  position: relative;
   background-color: $color-primary;
   background-image: url("../assets/icons/line-pattern.svg");
-
   background-size: cover;
   background-position: top left;
   width: 100%;
