@@ -1,7 +1,6 @@
 .navigation {
-  color: #fff;
-  top: 3rem;
-  right: 2.6rem;
+  top: 0;
+  left: 0;
 
   &__background {
     width: 1vw;
@@ -50,14 +49,49 @@
     }
   }
 
+  &__nav {
+    font-size: 3.2rem;
+    position: fixed;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: scale(0) translate(-50%, -50%);
+    transition: transform 0.3s;
+  }
+
   &__list {
     list-style: none;
     text-decoration: none;
+    text-align: center;
+  }
+
+  &__list--item {
+    padding: 1.8rem;
+    color: #fff;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__list--link:link,
+  &__list--link:active,
+  &__list--link:visited {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__list--link:hover {
+    border-bottom: 1px solid $color-grey-dark;
   }
 
   // Functionality
 
   &--toggle:checked ~ &__background {
     transform: scale(1000);
+  }
+
+  &--toggle:checked ~ &__background ~ &__nav {
+    transform: scale(1) translate(-50%, -50%);
   }
 }

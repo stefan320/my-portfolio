@@ -59,9 +59,8 @@ html {
   text-align: right; }
 
 .navigation {
-  color: #fff;
-  top: 3rem;
-  right: 2.6rem; }
+  top: 0;
+  left: 0; }
   .navigation__background {
     width: 1vw;
     height: 1vh;
@@ -96,11 +95,32 @@ html {
       top: 10px; }
     .navigation--btn::after {
       top: -25px; }
+  .navigation__nav {
+    font-size: 3.2rem;
+    position: fixed;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: scale(0) translate(-50%, -50%);
+    transition: transform 0.3s; }
   .navigation__list {
     list-style: none;
+    text-decoration: none;
+    text-align: center; }
+  .navigation__list--item {
+    padding: 1.8rem;
+    color: #fff; }
+    .navigation__list--item:not(:last-child) {
+      margin-bottom: 0.5rem; }
+  .navigation__list--link:link, .navigation__list--link:active, .navigation__list--link:visited {
+    color: #fff;
     text-decoration: none; }
+  .navigation__list--link:hover {
+    border-bottom: 1px solid #464e59; }
   .navigation--toggle:checked ~ .navigation__background {
     transform: scale(1000); }
+  .navigation--toggle:checked ~ .navigation__background ~ .navigation__nav {
+    transform: scale(1) translate(-50%, -50%); }
 
 .about {
   display: grid;
