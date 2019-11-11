@@ -28,6 +28,7 @@
     height: 2px;
     z-index: 9;
     cursor: pointer;
+    transition: all 0.3s;
 
     &::before,
     &::after {
@@ -38,6 +39,7 @@
       height: 2px;
       position: relative;
       left: -7px;
+      transition: all 0.3s;
     }
 
     &::before {
@@ -93,5 +95,19 @@
 
   &--toggle:checked ~ &__background ~ &__nav {
     transform: scale(1) translate(-50%, -50%);
+  }
+
+  &--toggle:checked ~ &--btn {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      top: -15px;
+      transform: rotate(45deg);
+    }
   }
 }
