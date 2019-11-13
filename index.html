@@ -47,11 +47,11 @@
     <main class="main">
       <div class="about" id="about">
         <img
-          src="assets/images-sm/about me_image.jpg"
+          src="assets/images-sm/about-me_image.jpg"
           alt="About me image"
           class="about--img"
         />
-        <h1 class="heading-1 about--heading">Who is</br>Stefan?</h1>
+        <h1 class="heading-primary about--heading">Who is</br>Stefan?</h1>
         <p class="paragraph about--me">I am a Front-End Web Developer whose passion revolves around bringing designs to life through the use of for UI effects, animations and creating engaging, dynamic user experiences. All websites are responsive on all devices no matter what the size. I enjoy developing rich web experiences. When I get the chance, I enjoy travelling and exploring nature.</p>
         <h2 class="heading-secondary pdx-md about--cta">Interested? Get in touch and<br> let’s make some magic!</h2>
         <img
@@ -62,31 +62,69 @@
       </div>
 
       <div id="priorities" class="priorities">
-
+        <h1 class="heading-primary">Priorities</h1>
           <div class="priorities__box">
-            <img src="/assets/icons/icon-responsive.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
-            <h2 class="heading-secondary">Diverse</h2>
+            <img src="/assets/icons/icon-diverse.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
+            <h2 class="heading-secondary priorities__box--heading">Diverse</h2>
             <p class="priorities--desc">Each project is developed for the client’s individual needs, making sure it is user-friendly.</p>
           </div>
 
           <div class="priorities__box">
               <img src="/assets/icons/icon-fast.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
-              <h2 class="heading-secondary">Fast</h2>
+              <h2 class="heading-secondary priorities__box--heading">Fast</h2>
               <p class="priorities--desc">Speed is key when a website is loading on any device.</p>
           </div>
 
           <div class="priorities__box">
-              <img src="/assets/icons/icon-responsive.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
-            <h2 class="heading-secondary">Responsive</h2>
+            <img src="/assets/icons/icon-responsive.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>    
+            <h2 class="heading-secondary priorities__box--heading">Responsive</h2>
             <p class="priorities--desc">All websites are responsive on all devices no matter what their size.</p>
           </div>
 
           <div class="priorities__box">
-              <img src="/assets/icons/icon-fast.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
-              <h2 class="heading-secondary">Dynamic</h2>
-          <p class="priorities--desc">Use of animation makes the website experience more exciting and interactive.</p>
+            <img src="/assets/icons/icon-dynamic.svg" id="svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
+            <h2 class="heading-secondary priorities__box--heading">Dynamic</h2>
+            <p class="priorities--desc">Use of animation makes the website experience more exciting and interactive.</p>
           </div>   
       </div>
+
+      <div class="projects__intro">
+        <h1 class="heading-primary heading-orange">Projects</h1>
+        <img src="assets/images-sm/superimposed.jpg" alt="Websites responsive on all devices" class="projects__intro--img">
+        <img src="assets/icons/icon-arrow.svg" alt="Continue and preview our latest projects" class="down--arrow">
+      </div>
+        <div class="projects__desc projects--blue" id="project--1">
+          <nav class="projects__nav">
+            <ul class="projects__nav--list">
+              <li class="projects__nav__li"><div class="projects__nav__li--line projects__nav__li--selected"></div>1&sol;4</li>
+              <li class="projects__nav__li"><div class="projects__nav__li--line"></div>2&sol;4</li>
+              <li class="projects__nav__li"><div class="projects__nav__li--line"></div>3&sol;4</li>
+              <li class="projects__nav__li"><div class="projects__nav__li--line"></div>4&sol;4</li>
+            </ul>
+          </nav>
+          <div class="projects__details">
+            <h2 class="heading-secondary">John martin borg</h2>
+            <img src="assets/images-sm/jmb.jpg" alt="John Martin Borg landing page screenshot" class="projects__details--img">
+            <p class="paragraph">This website illustrates a portfolio for the Maltese artist, John Martin Borg. It showcases a selection of the artist's beautiful works. After the theme was completed I integrated the website with WordPress CMS using 'PHP'. The design was handed to me in .pdf format which I then developed into fully functioning websites.</p>
+          </div>
+        </div>
+
+        <div class="projects__desc projects--grey" id="project--2">
+            <nav class="projects__nav">
+              <ul class="projects__nav--list">
+                <li class="projects__nav__li"><div class="projects__nav__li--line"></div>1&sol;4</li>
+                <li class="projects__nav__li"><div class="projects__nav__li--line projects__nav__li--selected"></div>2&sol;4</li>
+                <li class="projects__nav__li"><div class="projects__nav__li--line"></div>3&sol;4</li>
+                <li class="projects__nav__li"><div class="projects__nav__li--line"></div>4&sol;4</li>
+              </ul>
+            </nav>
+            <div class="projects__details">
+              <h2 class="heading-secondary">The Sandwich House</h2>
+              <img src="assets/images-sm/sandwich-house.jpg" alt="The Sandwich House landing page screenshot" class="projects__details--img">
+              <p class="paragraph">This is a fictitious website called ‘The Sandwich House’. This website portrays an online business targeting customers interested in ordering a sandwich or sandwiches from the comfort of their home or office. The design of the website allows the user to put together the customer’s preferred choice of sandwich. Once the order is complete they will have it delivered to them.</p>
+            </div>
+        </div>
+      
     </main>
 
     <script src="js/index.js"></script>

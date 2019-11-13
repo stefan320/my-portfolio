@@ -1,0 +1,29 @@
+.projects__nav {
+  &--list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  &__li {
+    color: $color-secondary;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    &--line {
+      display: block;
+      background-color: #fff;
+      height: 2.5rem;
+      width: 2px;
+      margin-left: 1.2rem;
+      transition: all 0.4s;
+    }
+  }
+
+  &__li--selected,
+  &__li:hover &__li--line {
+    height: 4.6rem;
+  }
+}

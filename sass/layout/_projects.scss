@@ -1,0 +1,39 @@
+.projects {
+  @include paddingY;
+
+  &__intro {
+    @include paddingY;
+    text-align: center;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &--img {
+      padding: 6rem 0 4rem;
+      object-fit: contain;
+    }
+  }
+
+  &--blue {
+    background-color: $color-primary;
+  }
+
+  &--grey {
+    background-color: $color-grey-dark;
+  }
+
+  &__desc {
+  }
+
+  &__details {
+    padding: 3rem 4.5rem;
+    text-align: center;
+
+    &--img {
+      max-width: 100%;
+      padding: 2rem 0;
+    }
+  }
+}

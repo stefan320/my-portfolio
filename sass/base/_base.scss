@@ -66,3 +66,15 @@ html {
   padding-left: 3rem;
   padding-right: 3rem;
 }
+
+@mixin paddingY {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+//Arrow
+.down--arrow {
+  transform: rotate(90deg);
+  width: 4.5rem;
+  height: 4.5rem;
+}
