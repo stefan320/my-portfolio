@@ -314,4 +314,11 @@ html {
     text-align: center; }
     .projects__details--img {
       max-width: 100%;
-      padding: 2rem 0; }
+      padding-top: 2rem; }
+    .projects__details--link {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      color: #f47d20;
+      text-decoration: none; }
+    .projects__details--summary {
+      padding: 2.5rem 0; }
