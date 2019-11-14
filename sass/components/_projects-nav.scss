@@ -9,7 +9,7 @@
 
   &__li {
     color: $color-secondary;
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
 
     &--line {
@@ -19,6 +19,14 @@
       width: 2px;
       margin-left: 1.2rem;
       transition: all 0.4s;
+    }
+
+    &--link {
+      display: inline-block;
+      text-decoration: none;
+      color: currentColor;
+      height: 8rem;
+      width: 3.6rem;
     }
   }
 

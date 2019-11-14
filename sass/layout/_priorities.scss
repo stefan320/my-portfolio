@@ -28,8 +28,13 @@
   &--desc {
     font-weight: 700;
     padding: 1.2rem;
-    font-size: 1.2rem;
-    border: 1px solid rgba($color-grey-light, 0.4);
+    font-size: 1.4rem;
+    border: 2px solid rgba($color-grey-light, 0.4);
     border-radius: 15px;
+    transition: border 0.4s;
+  }
+
+  &--desc:hover {
+    border: 2px solid greenyellow;
   }
 }
