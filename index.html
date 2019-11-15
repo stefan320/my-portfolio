@@ -25,8 +25,8 @@
             <li class="navigation__list--item"><a class="navigation__list--link" href="#projects">Projects</a></li>
             <li class="navigation__list--item"><a class="navigation__list--link" href="#contact">Contact</a></li>
           </ul>
-        </nav
-    </div>
+        </nav>
+      </div>
       <img
         src="/assets/icons/logo.svg"
         alt="Stefan Cutajar logo"
@@ -89,7 +89,7 @@
           </div>   
       </div>
 
-      <div class="projects__intro">
+      <div class="projects__intro" id="projects">
         <h1 class="heading-primary heading-orange">Projects</h1>
         <img src="assets/images-sm/superimposed.jpg" alt="Websites responsive on all devices" class="projects__intro--img">
         <img src="assets/icons/icon-arrow.svg" alt="Continue and preview our latest projects" class="down--arrow">
@@ -240,6 +240,24 @@
             </div>
         </div>
     </main>
+
+    <div class="contact" id="contact">
+      <h1 class="heading-primary">CONTACT</h1>
+      <h4 class="contact--heading">Have a question, a new project in mind or an inquiry?</h4>
+      <div class="contact__info">
+        <a href="tel:+35679785975" class="contact__info--link">+356 79785975</a>
+        <span>&vert;</span>
+        <a href="mailto:stefann320@gmail.com" class="contact__info--link">stefann320@gmail.com</a>
+      </div>
+      <form action="#" class="contact__form">
+        <input type="text" name="name" class="contact__form--input" id="contact--name" placeholder="Name">
+        <input type="text" name="email" class="contact__form--input" id="contact--email" placeholder="Email">
+        <textarea name="message"  class="contact__form--textarea" id="contact--message" cols="30" rows="10" placeholder="Message"></textarea>
+        <button type="submit" class="contact__form--submit">Send</button>
+      </form>
+
+
+    </div>
 
     <script src="js/index.js"></script>
   </body>

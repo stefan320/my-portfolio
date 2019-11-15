@@ -5,6 +5,7 @@ $color-grey-dark: #464e59;
 $color-grey-light: #d7dce2;
 
 $font-primary: "Quicksand", sans-serif;
+$default-font-size: 1.4rem;
 
 //Scroll Bar
 
@@ -67,9 +68,18 @@ html {
   padding-right: 3rem;
 }
 
+// Change Padding to retrive-space mixin aswell if modified
 @mixin paddingY {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+
+@mixin retrive-space {
+  margin-top: -10rem; //cover the whitespace caused by the clip path from the projects section
+  padding-top: calc(
+    10rem + 3.2rem
+  ); //Additional padding top to make up for the negative margin
+  padding-bottom: 3.2rem;
 }
 
 //Arrow

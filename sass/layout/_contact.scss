@@ -1,0 +1,62 @@
+.contact {
+  @include wrapper;
+  @include retrive-space;
+  background-color: $color-primary;
+  text-align: center;
+  color: #fff;
+
+  &--heading {
+    @include paddingY;
+    color: $color-secondary;
+    font-weight: 300;
+    font-size: $default-font-size;
+  }
+
+  &__info {
+  }
+
+  &__info--link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: $default-font-size;
+  }
+
+  &__form {
+    padding-top: 3.2rem;
+    width: 100%;
+
+    &--input,
+    &--textarea {
+      border: none;
+      font-family: inherit;
+      background-color: $color-secondary;
+      width: 100%;
+      padding-top: 4px;
+      padding-left: 4px;
+
+      &::placeholder {
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+
+    &--input {
+      margin-bottom: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    &--submit {
+      text-transform: uppercase;
+      background-color: $color-primary;
+      border: 1px solid #fff;
+      margin: 4.5rem auto;
+      color: #fff;
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      font-family: inherit;
+      padding: 0.6rem 3.7rem;
+    }
+  }
+}
