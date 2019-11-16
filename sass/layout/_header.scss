@@ -28,7 +28,7 @@
       width: 1px;
       border-bottom: 2px solid #fff;
       border-top: 2px solid #fff;
-      transform: scaleY(0);
+      transform: scaleY(0); // Scale is set when page loads in index.js
       transform-origin: top;
       transition: transform 0.2s 0.5s;
     }
@@ -40,7 +40,7 @@
       margin-top: 14.9rem; // Set margin double to lineY scale value so letter L is formed
       border-left: 1px solid #fff;
       border-right: 1px solid #fff;
-      transform: scaleX(0);
+      transform: scaleX(0); // Scale is set when page loads in index.js
       transform-origin: left;
       transition: transform 0.2s 0.7s;
     }

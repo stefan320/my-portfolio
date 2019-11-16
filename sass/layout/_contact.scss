@@ -13,13 +13,18 @@
   }
 
   &__info {
+    font-size: $default-font-size;
+
+    &--seperator {
+      padding: 0 0.8rem;
+    }
   }
 
   &__info--link {
     color: #fff;
     text-decoration: none;
     font-weight: 700;
-    font-size: $default-font-size;
+    font-size: inherit;
   }
 
   &__form {
@@ -57,6 +62,7 @@
       font-weight: 700;
       font-family: inherit;
       padding: 0.6rem 3.7rem;
+      cursor: pointer;
     }
   }
 }

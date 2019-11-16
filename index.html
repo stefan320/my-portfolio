@@ -92,7 +92,7 @@
       <div class="projects__intro" id="projects">
         <h1 class="heading-primary heading-orange">Projects</h1>
         <img src="assets/images-sm/superimposed.jpg" alt="Websites responsive on all devices" class="projects__intro--img">
-        <img src="assets/icons/icon-arrow.svg" alt="Continue and preview our latest projects" class="down--arrow">
+        <a href="#project--1" class="projects__intro--link"><img src="assets/icons/icon-arrow.svg" alt="Continue and preview our latest projects" class="down--arrow"></a>
       </div>
         <div class="projects__desc projects--blue" id="project--1">
           <nav class="projects__nav">
@@ -246,7 +246,7 @@
       <h4 class="contact--heading">Have a question, a new project in mind or an inquiry?</h4>
       <div class="contact__info">
         <a href="tel:+35679785975" class="contact__info--link">+356 79785975</a>
-        <span>&vert;</span>
+        <span class="contact__info--seperator">&vert;</span>
         <a href="mailto:stefann320@gmail.com" class="contact__info--link">stefann320@gmail.com</a>
       </div>
       <form action="#" class="contact__form">
@@ -255,9 +255,14 @@
         <textarea name="message"  class="contact__form--textarea" id="contact--message" cols="30" rows="10" placeholder="Message"></textarea>
         <button type="submit" class="contact__form--submit">Send</button>
       </form>
-
-
     </div>
+
+    <footer class="footer">
+       <!-- 2019 is replaced dynamicaly from index.js to the current year -->
+      <div class="footer__text">
+        &copy; 2019 &vert; All Rights Reserved &vert; Stefan Cutajar &amp; Claire Borg
+      </div>
+    </footer>
 
     <script src="js/index.js"></script>
   </body>
