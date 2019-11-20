@@ -74,7 +74,7 @@ html {
 }
 
 @mixin retrive-space {
-  margin-top: -10rem; //cover the whitespace caused by the clip path from the projects section
+  margin-top: -10.2rem; //cover the whitespace caused by the clip path from the projects section
   padding-top: calc(
     10rem + 3.2rem
   ); //Additional padding top to make up for the negative margin

@@ -1,7 +1,19 @@
 <svg width="94.2" height="89.3" xmlns="http://www.w3.org/2000/svg">
+<style>
+@keyframes translate-up-down{
+    0% {transform: translateX(-6px);}
+    25% { transform: translateX(0px);}
+    50% {transform: translateX(8px);}
+    75% {transform: translateX(0px);}
+    100% {transform: translateX(-6px);}
+}
+#svg_3{
+    animation: translate-up-down 1.2s infinite;    
+}
 
+</style>
  <g>
-  <title>background</title>
+  <title>Arrow pointing down</title>
   <rect fill="none" id="canvas_background" height="91.3" width="96.2" y="-1" x="-1"/>
  </g>
  <g>

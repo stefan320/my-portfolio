@@ -1,3 +1,4 @@
+// Uses 'Akzidenz-Grotesk-medium' as a font for the numbers
 .projects__nav {
   &--list {
     display: flex;
@@ -9,7 +10,7 @@
 
   &__li {
     color: $color-secondary;
-    font-size: 2rem;
+    font-size: 2.2rem;
     cursor: pointer;
 
     &--line {
@@ -17,21 +18,28 @@
       background-color: #fff;
       height: 2.5rem;
       width: 2px;
-      margin-left: 1.2rem;
+      margin-left: 1rem;
+      margin-bottom: 0.4rem;
       transition: all 0.4s;
     }
 
     &--link {
+      font-family: "akzidenz";
       display: inline-block;
       text-decoration: none;
       color: currentColor;
       height: 8rem;
       width: 3.6rem;
     }
+
+    &--last-number {
+      font-size: 1.4rem;
+    }
   }
 
   &__li--selected,
   &__li:hover &__li--line {
     height: 4.6rem;
+    background-color: $color-secondary;
   }
 }
