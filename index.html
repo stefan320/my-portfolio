@@ -14,6 +14,7 @@
   </head>
   <body class="preload">
     <header class="header">
+    <canvas class="header--canvas"></canvas>
     <div class="navigation">
       <input type="checkbox" name="navigation--toggle" id="navigation--toggle" class="navigation--toggle">
       <label for="navigation--toggle" class="navigation--btn">&nbsp;</label>
@@ -27,23 +28,26 @@
           </ul>
         </nav>
       </div>
-      <img
-        src="/assets/icons/logo.svg"
-        alt="Stefan Cutajar logo"
-        class="header--logo"
-      />
-      <div class="header__animation">
-        <div class="header__animation--lineY"></div>
-        <a href="#about" class="header__animation--enter">Enter</a>
-        <div class="header__animation--lineX">
-          <a class="header__animation--link" href="#about"
-          ><img
-            class="header__animation--link--img"
-            src="assets/icons/icon-arrow.svg"
-            alt="Enter Website"
-        /></a>
+      <div class="header__overlay">
+          <img
+          src="/assets/icons/logo.svg"
+          alt="Stefan Cutajar logo"
+          class="header--logo"
+        />
+        <div class="header__animation">
+          <div class="header__animation--lineY"></div>
+          <a href="#about" class="header__animation--enter">Enter</a>
+          <div class="header__animation--lineX">
+            <a class="header__animation--link" href="#about"
+            ><img
+              class="header__animation--link--img"
+              src="assets/icons/icon-arrow.svg"
+              alt="Enter Website"
+          /></a>
+          </div>
         </div>
       </div>
+
     </header>
 
     <main class="main">
@@ -266,5 +270,6 @@
     </footer>
 
     <script src="js/index.js"></script>
+    <script src="js/canvas.js"></script>
   </body>
 </html>
