@@ -12,7 +12,7 @@ const mouse = {
   x: undefined,
   y: undefined
 };
-const linesArray = [];
+var linesArray = [];
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -30,6 +30,7 @@ canvas.addEventListener("mouseout", e => {
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  createLines();
 });
 
 class Line {
@@ -66,6 +67,7 @@ class Line {
 }
 
 const createLines = () => {
+  linesArray = [];
   for (let i = 0; i < 300; i++) {
     linesArray.push(new Line(mtx, 0, 0, lty, defaultColor));
     linesArray[i].drawLine();
