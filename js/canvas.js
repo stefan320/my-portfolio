@@ -109,4 +109,4 @@ function animate() {
   // c.stroke();
 }
 createLines();
-animate();
+// animate();
