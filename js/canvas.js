@@ -4,7 +4,7 @@ const c = canvas.getContext("2d");
 
 const defaultColor = "rgba(255,255,255, .4)";
 const whiteGold = " #bba58e";
-const defaultLineWidth = 0.6;
+const defaultLineWidth = 0.5;
 let mtx = 30; //MoveTo X Starting Value
 let lty = 30; //Linto To Y Starting Value
 
@@ -52,6 +52,7 @@ class Line {
     c.stroke();
   }
 
+  //Animation
   update() {
     if (
       mouse.x + mouse.y >= this.mtx - 10 &&
@@ -68,6 +69,7 @@ class Line {
 
 const createLines = () => {
   linesArray = [];
+
   for (let i = 0; i < 300; i++) {
     linesArray.push(new Line(mtx, 0, 0, lty, defaultColor));
     linesArray[i].drawLine();
@@ -79,6 +81,7 @@ const createLines = () => {
 function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, innerWidth, innerHeight);
+
   linesArray.forEach(el => {
     el.update();
     el.drawLine();
@@ -108,5 +111,5 @@ function animate() {
   // c.lineWidth = 2.8;
   // c.stroke();
 }
+animate();
 createLines();
-// animate();
