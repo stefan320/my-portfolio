@@ -30,6 +30,7 @@ canvas.addEventListener("mouseout", e => {
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  createLines();
 });
 
 class Line {
@@ -68,8 +69,8 @@ class Line {
 
 const createLines = () => {
   linesArray = [];
-  console.log("before");
-  console.log(linesArray);
+  mtx = 30;
+  lty = 30;
 
   for (let i = 0; i < 300; i++) {
     linesArray.push(new Line(mtx, 0, 0, lty, defaultColor));
@@ -77,16 +78,18 @@ const createLines = () => {
     mtx += 30;
     lty += 30;
   }
+  // console.log(linesArray.length);
 };
 
 function animate() {
   requestAnimationFrame(animate);
-  c.clearRect(0, 0, innerWidth, innerHeight);
+  c.clearRect(0, 0, canvas.width, canvas.height);
 
-  // linesArray.forEach(el => {
-  //   el.update();
-  //   el.drawLine();
-  // });
+  linesArray.forEach(el => {
+    el.update();
+    el.drawLine();
+    // console.log(el);
+  });
 
   // c.drawImage(
   //   logo,
@@ -112,10 +115,7 @@ function animate() {
   // c.lineWidth = 2.8;
   // c.stroke();
 }
+
 createLines();
 
-setTimeout(function() {
-  animate();
-}, 3000);
-
-// animate();
+animate();
