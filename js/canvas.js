@@ -1,4 +1,5 @@
 const canvas = document.querySelector(".header--canvas");
+const header = document.getElementById("header");
 const logo = document.querySelector(".logo");
 const c = canvas.getContext("2d");
 
@@ -15,6 +16,7 @@ const mouse = {
 var linesArray = [];
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+window.location.href = "#header";
 
 //Events
 canvas.addEventListener("mousemove", e => {
