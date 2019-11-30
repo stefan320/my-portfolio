@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Stefan Cutajar - Front-End Web Developer</title>
   </head>
   <body class="preload">
@@ -70,26 +71,26 @@
       </div>
 
       <div id="priorities" class="priorities">
-        <h1 class="heading-primary">Priorities</h1>
-          <div class="priorities__box">
+        <h1 class="heading-primary" data-aos="fade-right">Priorities</h1>
+          <div class="priorities__box" data-aos="fade-left">
             <img src="/assets/icons/icon-diverse.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
             <h2 class="heading-secondary priorities__box--heading">Diverse</h2>
             <p class="priorities--desc">Each project is developed for the client’s individual needs, making sure it is user friendly.</p>
           </div>
 
-          <div class="priorities__box">
+          <div class="priorities__box" data-aos="fade-right">
               <img src="/assets/icons/icon-fast.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
               <h2 class="heading-secondary priorities__box--heading">Fast</h2>
               <p class="priorities--desc">Speed is key when a website is loading on any device. It is proven that 40&percnt; of users will abandon a webpage if it takes longer than 3 seconds to load.</p>
           </div>
 
-          <div class="priorities__box">
+          <div class="priorities__box" data-aos="fade-left">
             <img src="/assets/icons/icon-responsive.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>    
             <h2 class="heading-secondary priorities__box--heading">Responsive</h2>
             <p class="priorities--desc">Statistics have shown that almost 50&percnt; of internet traffic comes from mobile devices. This is why we ensure that all websites are responsive on all devices no matter what their size.</p>
           </div>
 
-          <div class="priorities__box">
+          <div class="priorities__box" data-aos="fade-right">
             <img src="/assets/icons/icon-dynamic.svg" id="svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
             <h2 class="heading-secondary priorities__box--heading">Dynamic</h2>
             <p class="priorities--desc">Use of animation makes the website experience more exciting and interactive.</p>
@@ -273,5 +274,7 @@
 
     <script src="js/index.js"></script>
     <script src="js/canvas.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/animations.js"></script>
   </body>
 </html>
