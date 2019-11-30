@@ -38,7 +38,9 @@ html {
   font-size: 62.5%;
   font-family: "Quicksand", sans-serif;
   scroll-behavior: smooth;
-  color: #fff;
+  color: #fff; }
+
+body {
   overflow-x: hidden; }
 
 .preload * {
