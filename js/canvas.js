@@ -1,5 +1,4 @@
 const canvas = document.querySelector(".header--canvas");
-const header = document.getElementById("header");
 const logo = document.querySelector(".logo");
 const c = canvas.getContext("2d");
 
@@ -16,8 +15,8 @@ const mouse = {
 var linesArray = [];
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-window.location.href = "#header";
 
+//Test if user is unsing a mobile device
 mobilecheck = () => {
   var check = false;
   (function(a) {
@@ -35,11 +34,13 @@ mobilecheck = () => {
 };
 
 //Events
+//Get the mouse cordinates and store them in the mouse object
 canvas.addEventListener("mousemove", e => {
   mouse.x = e.x;
   mouse.y = e.y;
 });
 
+//Reset the mouse object values the undifined on mouseout
 canvas.addEventListener("mouseout", e => {
   mouse.x = undefined;
   mouse.y = undefined;
@@ -96,7 +97,6 @@ const createLines = () => {
     mtx += 30;
     lty += 30;
   }
-  // console.log(linesArray.length);
 };
 
 function animate() {
@@ -106,32 +106,7 @@ function animate() {
   linesArray.forEach(el => {
     el.update();
     el.drawLine();
-    // console.log(el);
   });
-
-  // c.drawImage(
-  //   logo,
-  //   innerWidth / 2 - logo.width / 2,
-  //   innerHeight / 2 - logo.height / 2
-  // );
-
-  // c.moveTo(
-  //   innerWidth / 2 - logo.width / 2 + 30,
-  //   innerHeight / 2 + logo.height / 2 + 20
-  // );
-
-  // c.lineTo(
-  //   innerWidth / 2 - logo.width / 2 + 30,
-  //   innerHeight / 2 + logo.height / 2 + 190
-  // );
-
-  // c.lineTo(
-  //   innerWidth / 2 + logo.width / 2 - 50,
-  //   innerHeight / 2 + logo.height / 2 + 190
-  // );
-
-  // c.lineWidth = 2.8;
-  // c.stroke();
 }
 
 createLines();

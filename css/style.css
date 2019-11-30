@@ -125,28 +125,41 @@ html {
   .navigation--toggle {
     display: none; }
   .navigation--btn {
+    display: block;
     position: fixed;
-    top: 3rem;
-    right: 2.6rem;
+    top: 1.6rem;
+    right: 1.6rem;
+    width: 23px;
+    height: 2px;
+    z-index: 10;
+    transition: all 0.3s;
+    cursor: pointer;
+    padding: 2rem; }
+  .navigation--icon {
+    display: block;
+    z-index: 9;
     background-color: #fff;
     width: 23px;
     height: 2px;
-    z-index: 9;
-    cursor: pointer;
-    transition: all 0.3s; }
-    .navigation--btn::before, .navigation--btn::after {
+    z-index: 10;
+    transition: all 0.3s;
+    position: relative;
+    right: 0.8rem; }
+    .navigation--icon::before, .navigation--icon::after {
       display: block;
       content: "";
       background-color: #fff;
       width: 30px;
       height: 2px;
       position: relative;
-      left: -7px;
+      right: 7px;
       transition: all 0.3s; }
-    .navigation--btn::before {
-      top: 10px; }
-    .navigation--btn::after {
-      top: -25px; }
+    .navigation--icon::before {
+      top: 10px;
+      z-index: 11; }
+    .navigation--icon::after {
+      top: -12px;
+      z-index: 12; }
   .navigation__nav {
     font-size: 3.2rem;
     position: fixed;
@@ -173,13 +186,13 @@ html {
     transform: scale(1000); }
   .navigation--toggle:checked ~ .navigation__background ~ .navigation__nav {
     transform: scale(1) translate(-50%, -50%); }
-  .navigation--toggle:checked ~ .navigation--btn {
+  .navigation--toggle:checked ~ .navigation--btn .navigation--icon {
     background-color: transparent; }
-    .navigation--toggle:checked ~ .navigation--btn::before {
+    .navigation--toggle:checked ~ .navigation--btn .navigation--icon::before {
       top: 0;
       transform: rotate(-45deg); }
-    .navigation--toggle:checked ~ .navigation--btn::after {
-      top: -15px;
+    .navigation--toggle:checked ~ .navigation--btn .navigation--icon::after {
+      top: -2px;
       transform: rotate(45deg); }
 
 .about {
