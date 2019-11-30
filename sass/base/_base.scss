@@ -50,6 +50,7 @@ html {
   font-family: $font-primary;
   scroll-behavior: smooth;
   color: #fff;
+  overflow-x: hidden;
 }
 
 // Prevent animations to run before load
