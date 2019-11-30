@@ -40,9 +40,6 @@ html {
   scroll-behavior: smooth;
   color: #fff; }
 
-body {
-  overflow-x: hidden; }
-
 .preload * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
@@ -363,6 +360,7 @@ body {
   padding-bottom: 3.2rem;
   background-color: #09192f;
   height: 100%;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center; }

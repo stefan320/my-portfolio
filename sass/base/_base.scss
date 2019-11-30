@@ -52,10 +52,6 @@ html {
   color: #fff;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 // Prevent animations to run before load
 .preload * {
   -webkit-transition: none !important;
