@@ -6,12 +6,16 @@
 	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
 	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
 ]>
+
+
 <svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	 x="0px" y="0px" width="214.2px" height="223.6px" viewBox="0 0 214.2 223.6" enable-background="new 0 0 214.2 223.6"
 	 xml:space="preserve">
+
 <g>
-	<path fill="#F47D20" d="M119.5,34.3c-33.2,0-62.4,17.1-79.3,43H59c14.6-17.1,36.3-28,60.6-28c43.9,0,79.7,35.7,79.7,79.7
+
+	<path fill="#F47D20" id="arrow" d="M119.5,34.3c-33.2,0-62.4,17.1-79.3,43H59c14.6-17.1,36.3-28,60.6-28c43.9,0,79.7,35.7,79.7,79.7
 		c0,43.9-35.7,79.7-79.7,79.7c-24.2,0-45.9-10.9-60.6-28H40.2c16.9,25.9,46.1,43,79.3,43c52.2,0,94.7-42.5,94.7-94.7
 		S171.7,34.3,119.5,34.3z"/>
 	<g>
