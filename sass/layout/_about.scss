@@ -7,30 +7,15 @@
   justify-content: center;
   background-color: $color-secondary;
   text-align: center;
-  overflow: hidden;
+
   padding-bottom: 8rem;
   clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 
-  &--img--wrapper {
+  &--img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     grid-column: 1 / -1;
     grid-row: 1 / 3;
-    overflow: hidden;
-
-    // background-image: url(../../assets/images-sm/about-me_image.jpg);
-    // background-repeat: no-repeat;
-    // height: 100vh;
-    // background-size: cover;
-    // background-attachment: fixed;
-  }
-
-  &--img {
-    transition: transform 0.3s;
-
-    &:hover {
-      transform: scale(1.2);
-    }
   }
 
   &--heading {
@@ -38,7 +23,6 @@
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     justify-self: center;
-    z-index: 2;
   }
 
   &--me {

@@ -1,0 +1,27 @@
+.icon {
+  &__fast &__fast--arrow {
+    transition: transform 0.3s;
+    transform-origin: center;
+  }
+
+  &__fast &__fast--regulator--tip {
+    transition: transform 0.3s;
+  }
+
+  &__fast &__fast--dash {
+    transition: transform 0.3s;
+  }
+
+  // ON Hover
+  &__fast:hover &__fast--arrow {
+    transform: rotate(35deg) translate(10px, -11px);
+  }
+
+  &__fast:hover &__fast--regulator--tip {
+    transform: translateY(6px);
+  }
+
+  &__fast:hover &__fast--dash {
+    transform: translateX(16px);
+  }
+}
