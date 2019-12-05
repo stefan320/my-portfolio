@@ -34,11 +34,16 @@
   box-sizing: inherit; }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
   font-family: "Quicksand", sans-serif;
   scroll-behavior: smooth;
   color: #fff; }
+  @media (min-width: 47.5em) {
+    html {
+      font-size: 87.5%; } }
+
+body {
+  box-sizing: border-box; }
 
 .preload * {
   -webkit-transition: none !important;

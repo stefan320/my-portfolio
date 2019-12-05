@@ -6,6 +6,16 @@ $color-grey-light: #d7dce2;
 
 $font-primary: "Quicksand", sans-serif;
 
+//Media Queries
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-port {
+    @media (min-width: 47.5em) {
+      @content;
+    } //760px / 16 = 47.5
+  }
+}
+
 //Scroll Bar
 
 /* width */
@@ -45,11 +55,18 @@ $font-primary: "Quicksand", sans-serif;
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%;
   font-family: $font-primary;
   scroll-behavior: smooth;
   color: #fff;
+
+  @include respond(tab-port) {
+    font-size: 87.5%; // 1rem = 14px, 14px/16px*100 = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
 }
 
 // Prevent animations to run before load
@@ -60,8 +77,8 @@ html {
   -o-transition: none !important;
 }
 
+//Mixins
 // Spaceing
-
 @mixin wrapper {
   padding-left: 3rem;
   padding-right: 3rem;
