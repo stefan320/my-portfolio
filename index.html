@@ -55,15 +55,21 @@
     
     <main class="main">
       <div class="about" id="about">
-        <img class="about--img"
+        <picture class="about--img">
+          <source srcset="assets/images-sm/about-me_image.jpg"  media="(max-width: 400px)">
+          <source srcset="assets/images-md/about-me_image-md.jpg" media="(min-width: 47.5em)">
+            <img src="assets/images-md/about-me_image-md.jpg" alt="Stefan Mountain trekking">
+        </picture>
+        <!-- <img
           srcset="assets/images-sm/about-me_image.jpg 400w,
-                  assets/images-md/about-me_image-md.jpg 800w"
-          sizes="(max-width:400px) 400px
+          assets/images-md/about-me_image-md.jpg 800w"
+          sizes="(max-width: 400px) 400px,
                 (max-width: 800px) 800px"
-                  
+          class="about--img" 
           alt="About me image"
-        />
-        <h1 class="heading-primary about--heading">Who is</br>Stefan?</h1>
+        /> -->
+        <h1 class="heading-primary about--heading" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">Who is</br>Stefan?</h1>
         <p class="paragraph about--me">I am a Front-End Web Developer whose passion revolves around bringing designs to life through the use of for UI effects, animations and creating engaging, dynamic user experiences. All websites are responsive on all devices no matter what the size. I enjoy developing rich web experiences. When I get the chance, I enjoy travelling and exploring nature.</p>
         <h2 class="heading-secondary pdx-md about--cta">Interested? Get in touch and<br> let’s make some magic!</h2>
         <img
