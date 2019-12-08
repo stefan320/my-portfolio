@@ -14,6 +14,11 @@ $font-primary: "Quicksand", sans-serif;
       @content;
     } //760px / 16 = 47.5
   }
+  @if $breakpoint == tab-lg {
+    @media (min-width: 64em) {
+      @content;
+    } //1024px / 16 = 64
+  }
 }
 
 //Scroll Bar
@@ -61,7 +66,7 @@ html {
   color: #fff;
 
   @include respond(tab-port) {
-    font-size: 87.5%; // 1rem = 14px, 14px/16px*100 = 75%
+    font-size: 75%; // 1rem = 12px, 12px/16px*100 = 75%
   }
 }
 
@@ -84,16 +89,16 @@ body {
   padding-right: 3rem;
 }
 
-// Change Padding to retrive-space mixin aswell if modified
+//!!Change Padding to retrive-space mixin aswell if modified!!
 @mixin paddingY {
   padding-top: 3.2rem;
   padding-bottom: 3.2rem;
 }
 
 @mixin retrive-space {
-  margin-top: -10.2rem; //cover the whitespace caused by the clip path from the projects section
+  margin-top: -14.2rem; //cover the whitespace caused by the clip path from the projects section
   padding-top: calc(
-    10rem + 3.2rem
+    14.2rem + 3.2rem
   ); //Additional padding top to make up for the negative margin
   padding-bottom: 3.2rem;
 }

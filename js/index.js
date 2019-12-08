@@ -12,8 +12,9 @@ const footerText = document.querySelector(".footer__text");
 window.addEventListener("load", () => {
   // Prevent animations to run before load
   body.classList.remove("preload");
-  animateLineY.style.height = "150px";
-  animateLineX.style.width = "150px";
+  animateLineY.style.height = "15rem";
+  animateLineX.style.width = "15rem";
+
   headerEnter.style.opacity = "1";
   headerLink.style.opacity = "1";
 });

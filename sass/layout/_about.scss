@@ -1,5 +1,4 @@
 .about {
-  //   position: relative;
   display: grid;
   grid-template-rows: 1fr 11rem;
   grid-template-columns: 1fr 18rem;
@@ -10,6 +9,11 @@
 
   padding-bottom: 8rem;
   clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
+
+  @include respond(tab-port) {
+    grid-template-rows: 1fr 10rem;
+    grid-template-columns: 1fr 1fr;
+  }
 
   &--img {
     display: block;
@@ -24,6 +28,19 @@
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     justify-self: center;
+
+    @include respond(tab-port) {
+      text-align: initial;
+      grid-column: 1/2;
+      align-self: center;
+      justify-self: right;
+    }
+
+    & > br {
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
   }
 
   &--me {

@@ -9,10 +9,26 @@
   flex-direction: column;
   align-items: center;
 
+  @include respond(tab-port) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  &--title {
+    @include respond(tab-port) {
+      flex-basis: 100%;
+    }
+  }
+
   &__box {
     @include paddingY;
     max-width: 70%;
     text-align: center;
+    @include respond(tab-port) {
+      flex-basis: 46%;
+    }
 
     &--heading {
       padding: 2rem 0;

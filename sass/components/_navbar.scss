@@ -22,8 +22,8 @@
   &--btn {
     display: block;
     position: fixed;
-    top: 1.6rem;
-    right: 1.6rem;
+    top: 1.4rem;
+    right: 1.4rem;
     width: 23px;
     height: 2px;
     z-index: 10;
@@ -36,7 +36,7 @@
     display: block;
     z-index: 9;
     background-color: #fff;
-    width: 23px;
+    width: 18px;
     height: 2px;
     z-index: 10;
     transition: all 0.3s;
@@ -51,7 +51,7 @@
       width: 30px;
       height: 2px;
       position: relative;
-      right: 7px;
+      right: 11px;
       transition: all 0.3s;
     }
 

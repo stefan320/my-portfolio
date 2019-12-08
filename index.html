@@ -52,24 +52,17 @@
       </div>
     </header>
 
-    
     <main class="main">
       <div class="about" id="about">
         <picture class="about--img">
-          <source srcset="assets/images-sm/about-me_image.jpg"  media="(max-width: 400px)">
-          <source srcset="assets/images-md/about-me_image-md.jpg" media="(min-width: 47.5em)">
-            <img src="assets/images-md/about-me_image-md.jpg" alt="Stefan Mountain trekking">
+          <source srcset="assets/images-sm/about-me_image400w.jpg"  media="(max-width: 25em)">
+          <source srcset="assets/images-sm/about-me_image600w.jpg"  media="(max-width: 37.5em)">
+          <source srcset="assets/images-sm/about-me_image760w.jpg"  media="(max-width: 47.5em)">
+          <source srcset="assets/images-md/about-me_image-md950w.jpg" media="(max-width: 59.375em)">
+            <img src="assets/images-md/about-me_image-md950w.jpg" alt="Stefan Mountain trekking">
         </picture>
-        <!-- <img
-          srcset="assets/images-sm/about-me_image.jpg 400w,
-          assets/images-md/about-me_image-md.jpg 800w"
-          sizes="(max-width: 400px) 400px,
-                (max-width: 800px) 800px"
-          class="about--img" 
-          alt="About me image"
-        /> -->
         <h1 class="heading-primary about--heading" data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom">Who is</br>Stefan?</h1>
+        data-aos-anchor-placement="top-bottom">Who&nbsp;is&nbsp;</br>Stefan?</h1>
         <p class="paragraph about--me">I am a Front-End Web Developer whose passion revolves around bringing designs to life through the use of for UI effects, animations and creating engaging, dynamic user experiences. All websites are responsive on all devices no matter what the size. I enjoy developing rich web experiences. When I get the chance, I enjoy travelling and exploring nature.</p>
         <h2 class="heading-secondary pdx-md about--cta">Interested? Get in touch and<br> let’s make some magic!</h2>
         <img
@@ -80,19 +73,32 @@
       </div>
 
       <div id="priorities" class="priorities">
-        <h1 class="heading-primary" data-aos="fade-right">Priorities</h1>
+        <h1 class="heading-primary priorities--title" data-aos="fade-right">Priorities</h1>
+
+        <!-- DIVERSE ICON SECTION -->
           <div class="priorities__box" data-aos="fade-left">
-            <img src="/assets/icons/icon-diverse.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
+              <svg width="123.9" height="231.4" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                 <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+                </g>
+                <g>
+                 <title>Layer 1</title>
+                 <g id="svg_1">
+                  <path d="m20.7,19.6c-18,22.5 -14.4,55.6 8.1,73.7c5.8,4.6 12.2,7.8 19,9.7c0.2,-3.1 0.3,-6.2 0.5,-9.4c-4.9,-1.6 -9.5,-4 -13.7,-7.4c-18.6,-15 -21.6,-42.3 -6.7,-60.9c14.9,-18.5 42.2,-21.5 60.7,-6.6c18.6,14.9 21.6,42.1 6.7,60.7c-5.2,6.4 -11.8,11 -19.1,13.6c0,1.5 0.1,3.1 0.2,4.6c0.1,1.7 0.1,3.3 0.2,5c9.9,-2.9 19,-8.8 25.9,-17.4c18.1,-22.5 14.4,-55.6 -8.1,-73.7c-22.5,-18.1 -55.6,-14.4 -73.7,8.1z" id="svg_3" fill="#F47D20"/>
+                  <path id="svg_2" d="m62.5,57.4c-2.9,0.2 -5.4,1.4 -6.9,3.2l-0.1,0.1c-1.8,2.3 -2.2,10.9 -2.4,15.9c0,0.1 0,0.3 0,0.4c-0.1,1.7 -0.1,3.1 -0.2,4.2c0,0.5 -0.1,1 -0.1,1.5c-0.4,4.1 -0.6,8 -0.9,11.8c-0.2,3.1 -0.3,6.2 -0.5,9.3c0,0.1 0,0.1 0,0.2c-0.4,6.8 -0.7,13.8 -1.4,21.6c-0.1,0.6 -0.1,1.2 -0.2,1.9c-0.6,7 -1.3,15.8 -5.5,20.3c-2.8,3 -5.7,4.2 -8.6,3.6c-6.4,-1.2 -10.3,-11 -12.4,-16.3c-0.3,-0.8 -0.6,-1.5 -0.8,-2c-0.7,-1.4 -1.2,-3 -1.8,-4.5c-1.7,-4.3 -3.4,-8.8 -6.7,-11c-2.3,-1.5 -9.4,-1.2 -12.5,2.8c-0.8,1 -1.3,2.2 -1.5,3.6c-0.1,4.5 2.6,10.4 5.3,16.1c1.1,2.3 2.2,4.6 3.1,6.8c6.8,16.7 12.5,30.7 18.9,46.2c3.5,8.6 15.2,30.7 21.9,34.6c8.1,4.8 33.1,4 40.5,3.2c5.9,-0.6 6.8,-4.6 12.8,-12.1c5.3,-6.6 13.5,-29.2 14.5,-32.5c2.5,-8.1 5,-16.5 6.1,-25.8c0.6,-5.5 2.5,-22.1 -2.7,-33c-5.6,-11.9 -18.8,-12.7 -26.6,-13.2l-0.5,0c-7.3,-0.4 -8.9,-0.3 -11.3,-0.2c-1.5,0.1 -3.4,0.2 -7.2,0.3l-1.9,0l0.1,-1.9c0.1,-3 0.1,-6 0,-8.9c-0.1,-1.9 -0.1,-3.8 -0.2,-5.8c0,-1.2 -0.1,-2.4 -0.1,-3.6c-0.1,-2.8 -0.2,-5.6 -0.2,-8.7c0,-1.1 0.1,-2.2 0.2,-3.4c0.1,-1.1 0.2,-2.3 0.3,-3.5c0.1,-0.9 0.2,-1.9 0.3,-2.8c0.5,-6 0.7,-12.7 -2.6,-15.8c-2.1,-1.9 -5,-2.8 -8.2,-2.6z" fill="#F47D20"/>
+                  <path id="svg_4" d="m81.4,27.7c-13.6,-10.9 -33.5,-8.7 -44.4,4.9c-10.9,13.6 -8.7,33.5 4.9,44.4c2.3,1.8 4.8,3.3 7.4,4.4c0,-0.2 0,-0.3 0,-0.5c0.1,-1.1 0.2,-2.7 0.2,-4.4c0,-0.3 0,-0.7 0,-1c-1.5,-0.8 -2.9,-1.7 -4.2,-2.8c-11.2,-9 -13,-25.4 -4,-36.6c9,-11.2 25.4,-13 36.6,-4c11.2,9 13,25.4 4,36.6c-1.5,1.8 -3.1,3.4 -4.9,4.7c-0.6,0.5 -1.3,0.9 -1.9,1.3c-0.2,2.3 -0.4,4.5 -0.6,6.5c0.7,-0.3 1.3,-0.6 1.9,-0.9c3.7,-2 7,-4.7 9.8,-8.1c10.9,-13.7 8.8,-33.6 -4.8,-44.5z" fill="#F47D20"/>
+                 </g>
+                </g>
+               </svg>
+            <!-- <img src="/assets/icons/icon-diverse.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/> -->
             <h2 class="heading-secondary priorities__box--heading">Diverse</h2>
             <p class="priorities--desc">Each project is developed for the client’s individual needs, making sure it is user friendly.</p>
           </div>
 
+          <!-- FAST ICON SECTION -->
           <div class="priorities__box" data-aos="fade-right">
-            <!-- <img src="/assets/icons/icon-fast.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/> -->
-
-
-
-            <svg version="1.1" id="Layer_1" class="icon icon__fast" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+   
+            <svg version="1.1" id="Layer_1" class="icon icon__fast" xmlns:x="&ns_extend;" xmlns:i="&ns_ai" xmlns:graph="&ns_graphs;"
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
                 x="0px" y="0px" width="214.2px" height="223.6px" viewBox="0 0 214.2 223.6" enable-background="new 0 0 214.2 223.6"
                 xml:space="preserve">
@@ -114,24 +120,51 @@
                 <path fill="#F47D20" class="icon__fast--arrow" d="M151.1,96.7c1.4-1.4,3.9-1,5.7,0.8l0,0c1.8,1.8,2.1,4.3,0.8,5.7l-37.9,36.6c-1.4,1.4-3.9,1-5.7-0.8l0,0
                   c-1.8-1.8-2.1-4.3-0.8-5.7L151.1,96.7z"/>
               </g>
-          </svg>
-
-
-
-
+            </svg>
 
               <h2 class="heading-secondary priorities__box--heading">Fast</h2>
               <p class="priorities--desc">Speed is key when a website is loading on any device. It is proven that 40&percnt; of users will abandon a webpage if it takes longer than 3 seconds to load.</p>
           </div>
 
+          <!-- RESPONSIVE ICON SECTION -->
           <div class="priorities__box" data-aos="fade-left">
-            <img src="/assets/icons/icon-responsive.svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>    
+              <svg width="225.6" height="161" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                 <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+                </g>
+                <g>
+                 <g id="svg_1">
+                  <path id="svg_2" d="m123.9,142l-42,0c1.7,12.6 -10.9,18.8 -10.9,18.8l63.2,0c-11,-4.1 -10.3,-18.8 -10.3,-18.8z" fill="#F47D20"/>
+                  <g id="svg_3">
+                   <circle id="svg_4" r="5.8" cy="124.6" cx="102.6" fill="none"/>
+                   <circle id="svg_5" r="5.8" cy="124.6" cx="102.6" fill="none"/>
+                   <path id="svg_6" d="m195.5,0l-185.8,0c-5.3,0 -9.7,4.4 -9.7,9.7l0,118.6c0,5.3 4.4,9.7 9.7,9.7l164.5,0l0,-25.3l-151.9,0c-5.3,0 -9.7,-4.4 -9.7,-9.7l0,-79.3c0,-5.3 4.4,-9.7 9.7,-9.7l160.5,0c5.3,0 9.7,4.4 9.7,9.7l0,44.5l12.6,0l0,-58.5c0.1,-5.3 -4.3,-9.7 -9.6,-9.7zm-92.9,118.8c3.2,0 5.8,2.6 5.8,5.8c0,3.2 -2.6,5.8 -5.8,5.8c-3.2,0 -5.8,-2.6 -5.8,-5.8c0,-3.2 2.6,-5.8 5.8,-5.8z" fill="#F47D20"/>
+                  </g>
+                  <path d="m217.9,70.9l-12.7,0l-12.6,0l-7.9,0c-4.3,0 -7.8,3.6 -7.8,8l0,33.8l0,25.3l0,15c0,4.4 3.5,8 7.8,8l33.3,0c4.3,0 7.8,-3.6 7.8,-8l0,-74.1c-0.2,-4.4 -3.6,-8 -7.9,-8zm-21.6,7.8l8.9,0l1,0l0,2l-1,0l-8.9,0l0,-2zm4.9,78.5c-2.2,0 -3.9,-1.8 -3.9,-3.9s1.8,-3.9 3.9,-3.9s3.9,1.8 3.9,3.9s-1.7,3.9 -3.9,3.9zm18.6,-10.8l-37.2,0l0,-8.5l0,-25.3l0,-24.8l9.9,0l12.6,0l14.7,0l0,58.6z" fill="#F47D20" id="path-1"/>
+                 </g>
+                </g>
+               </svg>            
             <h2 class="heading-secondary priorities__box--heading">Responsive</h2>
             <p class="priorities--desc">Statistics have shown that almost 50&percnt; of internet traffic comes from mobile devices. This is why we ensure that all websites are responsive on all devices no matter what their size.</p>
           </div>
 
+          <!-- DYNAMIC ICON SECTION -->
           <div class="priorities__box" data-aos="fade-right">
-            <img src="/assets/icons/icon-dynamic.svg" id="svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/>
+              <svg width="123.9" height="231.4" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                 <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+                </g>
+                <g>
+                 <title>Layer 1</title>
+                 <g id="svg_1">
+                  <path d="m20.7,19.6c-18,22.5 -14.4,55.6 8.1,73.7c5.8,4.6 12.2,7.8 19,9.7c0.2,-3.1 0.3,-6.2 0.5,-9.4c-4.9,-1.6 -9.5,-4 -13.7,-7.4c-18.6,-15 -21.6,-42.3 -6.7,-60.9c14.9,-18.5 42.2,-21.5 60.7,-6.6c18.6,14.9 21.6,42.1 6.7,60.7c-5.2,6.4 -11.8,11 -19.1,13.6c0,1.5 0.1,3.1 0.2,4.6c0.1,1.7 0.1,3.3 0.2,5c9.9,-2.9 19,-8.8 25.9,-17.4c18.1,-22.5 14.4,-55.6 -8.1,-73.7c-22.5,-18.1 -55.6,-14.4 -73.7,8.1z" id="svg_3" fill="#F47D20"/>
+                  <path id="svg_2" d="m62.5,57.4c-2.9,0.2 -5.4,1.4 -6.9,3.2l-0.1,0.1c-1.8,2.3 -2.2,10.9 -2.4,15.9c0,0.1 0,0.3 0,0.4c-0.1,1.7 -0.1,3.1 -0.2,4.2c0,0.5 -0.1,1 -0.1,1.5c-0.4,4.1 -0.6,8 -0.9,11.8c-0.2,3.1 -0.3,6.2 -0.5,9.3c0,0.1 0,0.1 0,0.2c-0.4,6.8 -0.7,13.8 -1.4,21.6c-0.1,0.6 -0.1,1.2 -0.2,1.9c-0.6,7 -1.3,15.8 -5.5,20.3c-2.8,3 -5.7,4.2 -8.6,3.6c-6.4,-1.2 -10.3,-11 -12.4,-16.3c-0.3,-0.8 -0.6,-1.5 -0.8,-2c-0.7,-1.4 -1.2,-3 -1.8,-4.5c-1.7,-4.3 -3.4,-8.8 -6.7,-11c-2.3,-1.5 -9.4,-1.2 -12.5,2.8c-0.8,1 -1.3,2.2 -1.5,3.6c-0.1,4.5 2.6,10.4 5.3,16.1c1.1,2.3 2.2,4.6 3.1,6.8c6.8,16.7 12.5,30.7 18.9,46.2c3.5,8.6 15.2,30.7 21.9,34.6c8.1,4.8 33.1,4 40.5,3.2c5.9,-0.6 6.8,-4.6 12.8,-12.1c5.3,-6.6 13.5,-29.2 14.5,-32.5c2.5,-8.1 5,-16.5 6.1,-25.8c0.6,-5.5 2.5,-22.1 -2.7,-33c-5.6,-11.9 -18.8,-12.7 -26.6,-13.2l-0.5,0c-7.3,-0.4 -8.9,-0.3 -11.3,-0.2c-1.5,0.1 -3.4,0.2 -7.2,0.3l-1.9,0l0.1,-1.9c0.1,-3 0.1,-6 0,-8.9c-0.1,-1.9 -0.1,-3.8 -0.2,-5.8c0,-1.2 -0.1,-2.4 -0.1,-3.6c-0.1,-2.8 -0.2,-5.6 -0.2,-8.7c0,-1.1 0.1,-2.2 0.2,-3.4c0.1,-1.1 0.2,-2.3 0.3,-3.5c0.1,-0.9 0.2,-1.9 0.3,-2.8c0.5,-6 0.7,-12.7 -2.6,-15.8c-2.1,-1.9 -5,-2.8 -8.2,-2.6z" fill="#F47D20"/>
+                  <path id="svg_4" d="m81.4,27.7c-13.6,-10.9 -33.5,-8.7 -44.4,4.9c-10.9,13.6 -8.7,33.5 4.9,44.4c2.3,1.8 4.8,3.3 7.4,4.4c0,-0.2 0,-0.3 0,-0.5c0.1,-1.1 0.2,-2.7 0.2,-4.4c0,-0.3 0,-0.7 0,-1c-1.5,-0.8 -2.9,-1.7 -4.2,-2.8c-11.2,-9 -13,-25.4 -4,-36.6c9,-11.2 25.4,-13 36.6,-4c11.2,9 13,25.4 4,36.6c-1.5,1.8 -3.1,3.4 -4.9,4.7c-0.6,0.5 -1.3,0.9 -1.9,1.3c-0.2,2.3 -0.4,4.5 -0.6,6.5c0.7,-0.3 1.3,-0.6 1.9,-0.9c3.7,-2 7,-4.7 9.8,-8.1c10.9,-13.7 8.8,-33.6 -4.8,-44.5z" fill="#F47D20"/>
+                 </g>
+                </g>
+               </svg>
+
+            <!-- <img src="/assets/icons/icon-dynamic.svg" id="svg" alt="Stefan Cutajar logo" class="priorities__box--logo"/> -->
             <h2 class="heading-secondary priorities__box--heading">Dynamic</h2>
             <p class="priorities--desc">Use of animation makes the website experience more exciting and interactive.</p>
           </div>   
@@ -139,9 +172,15 @@
 
       <div class="projects__intro" id="projects">
         <h1 class="heading-primary heading-orange">Projects</h1>
-        <img src="assets/images-sm/superimposed.jpg" alt="Websites responsive on all devices" class="projects__intro--img">
+        <picture class="projects__intro--img" alt="Websites responsive on all devices">
+            <source srcset="assets/images-sm/superimposed346w.jpg" media="(max-width: 47.5em)">
+            <source srcset="assets/images-sm/superimposed600w.jpg" media="(max-width: 64em)">
+              <img src="assets/images-sm/superimposed346w.jpg" alt="Websites responsive on all devices">
+        </picture>
+
         <a href="#project--1" class="projects__intro--link"><img src="assets/icons/icon-arrow.svg" alt="Continue and preview our latest projects" class="down--arrow"></a>
       </div>
+
         <div class="projects__desc projects--blue" id="project--1">
           <nav class="projects__nav">
             <ul class="projects__nav--list">
@@ -173,7 +212,12 @@
           </nav>
           <div class="projects__details">
             <h2 class="heading-secondary">John martin borg</h2>
-            <img src="assets/images-sm/jmb.jpg" alt="John Martin Borg landing page screenshot" class="projects__details--img">
+            <picture class="projects__details--img" alt="John Martin Borg landing page screenshot">
+                <source srcset="assets/images-sm/jmb-400w.jpg" media="(max-width: 47.5em)">
+                <source srcset="assets/images-sm/jmb-680w.jpg" media="(max-width: 64em)">
+                  <img src="assets/images-sm/jmb-400w.jpg" alt="John Martin Borg landing page screenshot">
+            </picture>
+
             <p class="paragraph  projects__details--summary">This website illustrates a portfolio for the Maltese artist, John Martin Borg. It showcases a selection of the artist's beautiful works. After the theme was completed I integrated the website with WordPress CMS using 'PHP'. The design was handed to me as a mockup which I then then developed into fully functioning website.</p>
             <a href="https://johnmartinborg.com/" class="projects__details--link">Visit Website</a>
           </div>
@@ -210,7 +254,16 @@
           </nav>
             <div class="projects__details">
               <h2 class="heading-secondary">The Sandwich House</h2>
-              <img src="assets/images-sm/sandwich-house.jpg" alt="The Sandwich House landing page screenshot" class="projects__details--img">
+              <picture alt="The Sandwich House landing page screenshot" class="projects__details--img">
+                  <source srcset="assets/images-sm/sandwich-house-400w.jpg" media="(max-width: 47.5em)">
+                  <source srcset="assets/images-sm/sandwich-house-680w.jpg" media="(max-width: 64em)">
+                    <img src="assets/images-sm/sandwich-house-680w.jpg">
+              </picture>
+
+
+
+
+              
               <p class="paragraph projects__details--summary">This is a fictitious website called ‘The Sandwich House’. This website portrays an online business targeting customers interested in ordering a sandwich or sandwiches from the comfort of their home or office. The design of the website allows the user to put together the customer’s preferred choice of sandwich and ingredients. Once the order is complete they will have it delivered to them.</p>
               <a href="https://stefan320.github.io/sandwich-house/" class="projects__details--link">Visit Website</a>
             </div>
@@ -246,7 +299,11 @@
               </nav>
               <div class="projects__details">
                 <h2 class="heading-secondary">BMW Survey</h2>
-                <img src="assets/images-sm/bmw.jpg" alt="BMW Survey screenshot" class="projects__details--img">
+                <picture class="projects__details--img" alt="BMW interior">
+                    <source srcset="assets/images-sm/bmw-400w.jpg" media="(max-width: 47.5em)">
+                    <source srcset="assets/images-sm/bmw-680w.jpg" media="(max-width: 64em)">
+                      <img src="assets/images-sm/bmw-400w.jpg">
+                </picture>
                 <p class="paragraph projects__details--summary">A fictitious web survey made with the intention to collect data from the users to help 'BMW' to improve future products and it's client’s satisfaction. This survey dynamically asks sets of questions and also ends based on the user answers. All data submitted is then saved in 'LocalStorage'. For this project I decided to show the statistics in graphs to ensure the best user experience is delivered</p>
                 <a href="https://upbeat-raman-e69fc5.netlify.com/?fbclid=IwAR3Ol5AKGCNo4KyidkeXbsd7kttIlkA69VMkGWyVb3CGT_00Lia4vIJfnR8" class="projects__details--link">Visit Website</a>
             </div>
@@ -282,7 +339,11 @@
               </nav>
               <div class="projects__details">
                 <h2 class="heading-secondary">TEST</h2>
-                <img src="assets/images-sm/sandwich-house.jpg" alt="TEST" class="projects__details--img">
+                <picture class="projects__details--img" alt="John Martin Borg landing page screenshot">
+                    <source srcset="assets/images-sm/jmb-400w.jpg" media="(max-width: 47.5em)">
+                    <source srcset="assets/images-sm/jmb-680w.jpg" media="(max-width: 64em)">
+                      <img src="assets/images-sm/jmb-400w.jpg" alt="John Martin Borg landing page screenshot">
+                </picture>
                 <p class="paragraph projects__details--summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tempore! Nulla necessitatibus quibusdam, earum repudiandae, at ipsum, provident possimus temporibus enim deserunt magni quae nobis similique voluptatem nostrum aut! Deserunt id ut tempore temporibus impedit? Possimus distinctio ipsam vel tempore?</p>
                 <a href="https://stefan320.github.io/sandwich-house/" class="projects__details--link">Visit Website</a>
             </div>

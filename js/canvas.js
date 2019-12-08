@@ -1,5 +1,5 @@
 const canvas = document.querySelector(".header--canvas");
-const logo = document.querySelector(".logo");
+// const logo = document.querySelector(".logo");
 const c = canvas.getContext("2d");
 
 const defaultColor = "rgba(255,255,255, .4)";

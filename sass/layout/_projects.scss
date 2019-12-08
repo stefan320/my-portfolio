@@ -35,7 +35,8 @@
     @include wrapper;
     text-align: center;
 
-    &--img {
+    &--img > source,
+    &--img > img {
       max-width: 100%;
       padding-top: 2rem;
     }
