@@ -29,7 +29,8 @@
 
   &__form {
     padding-top: 3.2rem;
-    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
 
     &--input,
     &--textarea {
@@ -39,7 +40,6 @@
       width: 100%;
       padding-top: 4px;
       padding-left: 4px;
-
       &::placeholder {
         color: #fff;
         font-weight: 700;
@@ -49,6 +49,12 @@
     &--input {
       margin-bottom: 1rem;
       padding-bottom: 2rem;
+    }
+
+    &--textarea {
+      @include respond(tab-port) {
+        height: 16em;
+      }
     }
 
     &--submit {

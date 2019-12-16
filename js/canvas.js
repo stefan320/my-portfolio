@@ -7,6 +7,8 @@ const whiteGold = " #bba58e";
 const defaultLineWidth = 0.5;
 let mtx = 30; //MoveTo X Starting Value
 let lty = 30; //Linto To Y Starting Value
+var isChrome =
+  /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
 const mouse = {
   x: undefined,
@@ -111,6 +113,6 @@ function animate() {
 
 createLines();
 
-if (!mobilecheck()) {
+if (!mobilecheck() && isChrome) {
   animate();
 }

@@ -14,10 +14,15 @@ $font-primary: "Quicksand", sans-serif;
       @content;
     } //760px / 16 = 47.5
   }
-  @if $breakpoint == tab-lg {
-    @media (min-width: 64em) {
+  @if $breakpoint == tab-land {
+    @media (min-width: 67.5em) {
       @content;
-    } //1024px / 16 = 64
+    } //1080px / 16 = 67.5
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 87.5em) {
+      @content;
+    } //1400px / 16 = 87.5
   }
 }
 
@@ -87,6 +92,11 @@ body {
 @mixin wrapper {
   padding-left: 3rem;
   padding-right: 3rem;
+
+  @include respond(tab-port) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 
 //!!Change Padding to retrive-space mixin aswell if modified!!
@@ -101,6 +111,11 @@ body {
     14.2rem + 3.2rem
   ); //Additional padding top to make up for the negative margin
   padding-bottom: 3.2rem;
+}
+
+@mixin max-width {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 //Arrow

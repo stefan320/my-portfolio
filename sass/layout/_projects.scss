@@ -25,9 +25,68 @@
     background-color: $color-grey-dark;
   }
 
+  &__desc {
+    @include respond(tab-land) {
+      display: grid;
+      grid-template-columns: 140px 1fr minmax(850px, 1000px) 1fr 140px;
+      align-items: center;
+      align-content: center;
+      height: 100vh;
+    }
+  }
+
   &__desc:last-child {
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     padding-bottom: 7rem; //Large padding to make up for space lost by clip path
+  }
+
+  &__overlay {
+    display: none;
+
+    @include respond(tab-land) {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+
+    &--jmb {
+      @include respond(tab-land) {
+        background-image: url(../../assets/images-md/jmb-landing1150w.png);
+      }
+    }
+
+    &__line {
+      display: none;
+
+      @include respond(tab-land) {
+        position: absolute;
+        bottom: -25px;
+        background-color: #fff;
+      }
+    }
+
+    &__line--x {
+      @include respond(tab-land) {
+        right: -24px;
+        width: 250px;
+        height: 2px;
+      }
+    }
+
+    &__line--y {
+      @include respond(tab-land) {
+        right: -25px;
+        width: 2px;
+        height: 250px;
+      }
+    }
   }
 
   &__details {
@@ -35,10 +94,92 @@
     @include wrapper;
     text-align: center;
 
-    &--img > source,
-    &--img > img {
+    @include respond(tab-land) {
+      display: grid;
+      grid-template-columns: 10% 40% 10% 40%;
+      grid-template-rows: 80px 130px 1fr;
+      grid-column: 3 / 4;
+      padding: 0;
+      background-color: $color-grey-light;
+      position: relative;
+      height: 70vh;
+      text-align: left;
+    }
+
+    &--first--row {
+      display: none;
+      &--blue {
+        @include respond(tab-land) {
+          display: block;
+          grid-row: 1 / 2;
+          grid-column: 1 / -1;
+          background-color: $color-primary;
+        }
+      }
+
+      &--grey {
+        @include respond(tab-land) {
+          display: block;
+          grid-row: 1 / 2;
+          grid-column: 1 / -1;
+          background-color: $color-grey-dark;
+        }
+      }
+    }
+
+    &--heading {
+      @include respond(tab-land) {
+        grid-row: 2 /3;
+        grid-column: 2 / 3;
+        color: $color-secondary;
+        align-self: center;
+      }
+    }
+
+    &--img {
+      &--mobile,
+      &--mobile source,
+      &--mobile img {
+        max-width: 100%;
+        max-height: 85vh;
+        padding-top: 3rem;
+
+        @include respond(tab-land) {
+          display: none;
+        }
+      }
+    }
+
+    &--img {
+      display: none;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       max-width: 100%;
-      padding-top: 2rem;
+
+      @include respond(tab-land) {
+        display: block;
+        grid-column: 4 / -1;
+        grid-row: 1 / -1;
+      }
+
+      &--jmb {
+        @include respond(tab-land) {
+          background-image: url(../../assets/images-sm/jmb-400w.jpg);
+        }
+      }
+
+      &--tsh {
+        @include respond(tab-land) {
+          background-image: url(../../assets/images-sm/sandwich-house-400w.jpg);
+        }
+      }
+
+      &--bmw {
+        @include respond(tab-land) {
+          background-image: url(../../assets/images-sm/bmw-400w.jpg);
+        }
+      }
     }
 
     &--link {
@@ -46,10 +187,22 @@
       font-size: 1.4rem;
       color: $color-secondary;
       text-decoration: none;
+
+      @include respond(tab-land) {
+        display: none;
+      }
     }
 
     &--summary {
       @include paddingY;
+
+      @include respond(tab-land) {
+        padding: 0;
+        grid-row: 3 / 4;
+        grid-column: 2/3;
+        color: #000;
+        font-size: 1.6rem;
+      }
     }
   }
 }

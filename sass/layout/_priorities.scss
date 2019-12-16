@@ -26,8 +26,14 @@
     @include paddingY;
     max-width: 70%;
     text-align: center;
+
     @include respond(tab-port) {
       flex-basis: 46%;
+    }
+
+    @include respond(desktop) {
+      flex-wrap: nowrap;
+      flex-basis: 20%;
     }
 
     &--heading {
@@ -35,10 +41,14 @@
       font-weight: 400 !important;
     }
 
-    &--logo {
-      width: 100%;
-      height: 17rem;
-    }
+    //FIX
+    //   &--logo {
+    //     height: 17rem;
+
+    //     @include respond(tab-port) {
+    //       height: 17rem !important;
+    //     }
+    //   }
   }
 
   &--desc {
@@ -48,6 +58,7 @@
     border: 2px solid rgba($color-grey-light, 0.4);
     border-radius: 15px;
     transition: border 0.4s;
+    height: 15rem;
   }
 
   &--desc:hover {
