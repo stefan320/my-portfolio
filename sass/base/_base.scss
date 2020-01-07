@@ -24,6 +24,11 @@ $font-primary: "Quicksand", sans-serif;
       @content;
     } //1400px / 16 = 87.5
   }
+  @if $breakpoint == desktop-lg {
+    @media (min-width: 100em) {
+      @content;
+    } //1600px / 16 = 100
+  }
 }
 
 //Scroll Bar
@@ -97,12 +102,30 @@ body {
     padding-left: 6rem;
     padding-right: 6rem;
   }
+
+  @include respond(tab-land) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 }
 
 //!!Change Padding to retrive-space mixin aswell if modified!!
 @mixin paddingY {
   padding-top: 3.2rem;
   padding-bottom: 3.2rem;
+
+  @include respond(tab-port) {
+    padding-top: 3.6rem;
+    padding-bottom: 3.6rem;
+  }
+  @include respond(tab-land) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  @include respond(desktop) {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
 }
 
 @mixin retrive-space {
@@ -118,9 +141,21 @@ body {
   margin: 0 auto;
 }
 
+@mixin projects-first-row-align {
+  display: flex;
+  align-items: center;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
 //Arrow
 .down--arrow {
   transform: rotate(90deg);
   width: 4.5rem;
   height: 4.5rem;
+}
+
+// Utilities
+.d-none {
+  display: none !important;
 }

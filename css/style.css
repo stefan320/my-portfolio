@@ -56,6 +56,9 @@ body {
   width: 4.5rem;
   height: 4.5rem; }
 
+.d-none {
+  display: none !important; }
+
 @font-face {
   font-family: akzidenz;
   src: url(../../assets/fonts/Akzidenz-Grotesk-medium.ttf); }
@@ -73,6 +76,9 @@ body {
   text-transform: uppercase;
   font-size: 3.4rem;
   font-weight: 300; }
+  @media (min-width: 47.5em) {
+    .heading-primary {
+      font-size: 4.2rem; } }
 
 .heading-secondary {
   text-transform: capitalize;
@@ -97,6 +103,9 @@ body {
 
 .icon__fast:hover .icon__fast--dash {
   transform: translateX(16px); }
+
+.icon__responsive {
+  transform: translateY(30px); }
 
 .navigation {
   top: 0;
@@ -251,43 +260,67 @@ body {
   justify-content: center;
   background-color: #f47d20;
   text-align: center;
+  overflow: hidden;
   padding-bottom: 8rem;
   clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%); }
   @media (min-width: 47.5em) {
     .about {
       grid-template-rows: 1fr 10rem;
-      grid-template-columns: 3rem 1fr 1fr 3rem;
+      grid-template-columns: minmax(3rem, 8rem) 1fr 1fr minmax(3rem, 8rem);
       text-align: left;
       padding-bottom: 15rem; } }
+  @media (min-width: 47.5em) {
+    .about {
+      grid-template-columns: 1fr 30% 30% 1fr; } }
   .about--img {
-    display: block;
     max-width: 100%;
     grid-column: 1 / -1;
     grid-row: 1 / 3;
-    overflow-x: hidden;
-    align-self: center; }
+    align-self: center;
+    overflow: hidden; }
   .about--img > source,
   .about--img > img {
+    display: block;
     width: 100%;
-    object-fit: cover; }
+    max-height: 80vh;
+    object-fit: cover;
+    transition: transform 0.3s; }
+    .about--img > source:hover,
+    .about--img > img:hover {
+      transform: scale(1.05); }
   .about--heading {
     text-align: right;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
-    justify-self: center; }
+    justify-self: center;
+    z-index: 2; }
     @media (min-width: 47.5em) {
       .about--heading {
         text-align: initial;
         grid-column: 2 / 3;
         align-self: center;
         justify-self: left; } }
+    @media (min-width: 67.5em) {
+      .about--heading {
+        align-self: start; } }
     @media (min-width: 47.5em) {
       .about--heading > br {
         display: none; } }
   .about--me {
+    padding-left: 3rem;
+    padding-right: 3rem;
     grid-column: 1 / -1; }
     @media (min-width: 47.5em) {
       .about--me {
+        padding-left: 6rem;
+        padding-right: 6rem; } }
+    @media (min-width: 67.5em) {
+      .about--me {
+        padding-left: 8rem;
+        padding-right: 8rem; } }
+    @media (min-width: 47.5em) {
+      .about--me {
+        padding: 0;
         grid-column: 2 / 3; } }
   .about--cta {
     grid-column: 1 / -1;
@@ -307,7 +340,8 @@ body {
       .about--logo {
         grid-row: 3 / -1;
         grid-column: 3 / 4;
-        align-self: center; } }
+        align-self: center;
+        justify-self: end; } }
 
 .contact {
   padding-left: 3rem;
@@ -322,12 +356,28 @@ body {
     .contact {
       padding-left: 6rem;
       padding-right: 6rem; } }
+  @media (min-width: 67.5em) {
+    .contact {
+      padding-left: 8rem;
+      padding-right: 8rem; } }
   .contact--heading {
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
     color: #f47d20;
     font-weight: 300;
     font-size: 1.4rem; }
+    @media (min-width: 47.5em) {
+      .contact--heading {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem; } }
+    @media (min-width: 67.5em) {
+      .contact--heading {
+        padding-top: 4rem;
+        padding-bottom: 4rem; } }
+    @media (min-width: 87.5em) {
+      .contact--heading {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem; } }
   .contact__info {
     font-size: 1.4rem; }
     .contact__info--seperator {
@@ -458,6 +508,10 @@ body {
     .priorities {
       padding-left: 6rem;
       padding-right: 6rem; } }
+  @media (min-width: 67.5em) {
+    .priorities {
+      padding-left: 8rem;
+      padding-right: 8rem; } }
   @media (min-width: 47.5em) {
     .priorities {
       flex-direction: row;
@@ -472,6 +526,18 @@ body {
     padding-bottom: 3.2rem;
     max-width: 70%;
     text-align: center; }
+    @media (min-width: 47.5em) {
+      .priorities__box {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem; } }
+    @media (min-width: 67.5em) {
+      .priorities__box {
+        padding-top: 4rem;
+        padding-bottom: 4rem; } }
+    @media (min-width: 87.5em) {
+      .priorities__box {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem; } }
     @media (min-width: 47.5em) {
       .priorities__box {
         flex-basis: 46%; } }
@@ -496,6 +562,18 @@ body {
 .projects {
   padding-top: 3.2rem;
   padding-bottom: 3.2rem; }
+  @media (min-width: 47.5em) {
+    .projects {
+      padding-top: 3.6rem;
+      padding-bottom: 3.6rem; } }
+  @media (min-width: 67.5em) {
+    .projects {
+      padding-top: 4rem;
+      padding-bottom: 4rem; } }
+  @media (min-width: 87.5em) {
+    .projects {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem; } }
   .projects__intro {
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
@@ -509,12 +587,47 @@ body {
     align-items: center; }
     @media (min-width: 47.5em) {
       .projects__intro {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem; } }
+    @media (min-width: 67.5em) {
+      .projects__intro {
+        padding-top: 4rem;
+        padding-bottom: 4rem; } }
+    @media (min-width: 87.5em) {
+      .projects__intro {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem; } }
+    @media (min-width: 47.5em) {
+      .projects__intro {
         padding-left: 6rem;
         padding-right: 6rem; } }
+    @media (min-width: 67.5em) {
+      .projects__intro {
+        padding-left: 8rem;
+        padding-right: 8rem; } }
+    @media (min-width: 67.5em) {
+      .projects__intro > h1 {
+        align-self: start; } }
     .projects__intro--img {
       padding-top: 3.2rem;
-      padding-bottom: 3.2rem;
-      object-fit: contain; }
+      padding-bottom: 3.2rem; }
+      @media (min-width: 47.5em) {
+        .projects__intro--img {
+          padding-top: 3.6rem;
+          padding-bottom: 3.6rem; } }
+      @media (min-width: 67.5em) {
+        .projects__intro--img {
+          padding-top: 4rem;
+          padding-bottom: 4rem; } }
+      @media (min-width: 87.5em) {
+        .projects__intro--img {
+          padding-top: 4.5rem;
+          padding-bottom: 4.5rem; } }
+    .projects__intro--img > img,
+    .projects__intro--img > source {
+      max-height: 55vh;
+      max-width: 100%;
+      object-fit: cover; }
   .projects--blue {
     background-color: #09192f; }
   .projects--grey {
@@ -526,6 +639,9 @@ body {
       align-items: center;
       align-content: center;
       height: 100vh; } }
+  @media (min-width: 100em) {
+    .projects__desc {
+      grid-template-columns: 140px 1fr minmax(1000px, 1200px) 1fr 140px; } }
   .projects__desc:last-child {
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     padding-bottom: 7rem; }
@@ -546,10 +662,17 @@ body {
     @media (min-width: 67.5em) {
       .projects__overlay--jmb {
         background-image: url(../../assets/images-md/jmb-landing1150w.png); } }
+    @media (min-width: 67.5em) {
+      .projects__overlay--sandwich {
+        background-image: url(../../assets/images-md/sandwich-landing1150w.jpg); } }
+    @media (min-width: 67.5em) {
+      .projects__overlay--bmw {
+        background-image: url(../../assets/images-md/bmw-landing1150w.jpg); } }
     .projects__overlay__line {
       display: none; }
       @media (min-width: 67.5em) {
         .projects__overlay__line {
+          display: block;
           position: absolute;
           bottom: -25px;
           background-color: #fff; } }
@@ -571,33 +694,63 @@ body {
     text-align: center; }
     @media (min-width: 47.5em) {
       .projects__details {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem; } }
+    @media (min-width: 67.5em) {
+      .projects__details {
+        padding-top: 4rem;
+        padding-bottom: 4rem; } }
+    @media (min-width: 87.5em) {
+      .projects__details {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem; } }
+    @media (min-width: 47.5em) {
+      .projects__details {
         padding-left: 6rem;
         padding-right: 6rem; } }
     @media (min-width: 67.5em) {
       .projects__details {
+        padding-left: 8rem;
+        padding-right: 8rem; } }
+    @media (min-width: 67.5em) {
+      .projects__details {
         display: grid;
-        grid-template-columns: 10% 40% 10% 40%;
-        grid-template-rows: 80px 130px 1fr;
+        grid-template-columns: 1fr 50% 1fr 35%;
+        grid-template-rows: 80px 110px auto;
         grid-column: 3 / 4;
         padding: 0;
         background-color: #d7dce2;
         position: relative;
-        height: 70vh;
-        text-align: left; } }
+        text-align: left;
+        min-height: 70vh; } }
+    @media (min-width: 100em) {
+      .projects__details {
+        grid-template-columns: 1fr 45% 1fr 40%; } }
     .projects__details--first--row {
       display: none; }
       @media (min-width: 67.5em) {
         .projects__details--first--row--blue {
-          display: block;
+          display: flex;
+          align-items: center;
           grid-row: 1 / 2;
           grid-column: 1 / -1;
           background-color: #09192f; } }
       @media (min-width: 67.5em) {
         .projects__details--first--row--grey {
-          display: block;
+          display: flex;
+          align-items: center;
           grid-row: 1 / 2;
           grid-column: 1 / -1;
           background-color: #464e59; } }
+    .projects__details--arrow {
+      display: none; }
+      @media (min-width: 67.5em) {
+        .projects__details--arrow {
+          display: block;
+          height: 4.5rem;
+          width: 4.5rem;
+          transform: rotate(180deg);
+          cursor: pointer; } }
     @media (min-width: 67.5em) {
       .projects__details--heading {
         grid-row: 2 /3;
@@ -635,17 +788,21 @@ body {
       @media (min-width: 67.5em) {
         .projects__details--img--bmw {
           background-image: url(../../assets/images-sm/bmw-400w.jpg); } }
-    .projects__details--link {
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      color: #f47d20;
-      text-decoration: none; }
-      @media (min-width: 67.5em) {
-        .projects__details--link {
-          display: none; } }
     .projects__details--summary {
       padding-top: 3.2rem;
       padding-bottom: 3.2rem; }
+      @media (min-width: 47.5em) {
+        .projects__details--summary {
+          padding-top: 3.6rem;
+          padding-bottom: 3.6rem; } }
+      @media (min-width: 67.5em) {
+        .projects__details--summary {
+          padding-top: 4rem;
+          padding-bottom: 4rem; } }
+      @media (min-width: 87.5em) {
+        .projects__details--summary {
+          padding-top: 4.5rem;
+          padding-bottom: 4.5rem; } }
       @media (min-width: 67.5em) {
         .projects__details--summary {
           padding: 0;
@@ -653,3 +810,37 @@ body {
           grid-column: 2/3;
           color: #000;
           font-size: 1.6rem; } }
+  @media (min-width: 67.5em) {
+    .projects__links {
+      text-align: center;
+      position: absolute;
+      width: 130px;
+      bottom: calc( -25px - 0.7rem);
+      right: 230px; } }
+  @media (min-width: 67.5em) {
+    .projects__links--container {
+      height: 1.7rem;
+      perspective: 150rem;
+      transform-style: preserve-3d; } }
+  .projects__links--visit, .projects__links--learn {
+    color: #f47d20;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: transform 0.4s;
+    width: 100%;
+    transform-origin: top;
+    cursor: pointer; }
+    @media (min-width: 67.5em) {
+      .projects__links--visit, .projects__links--learn {
+        position: absolute;
+        top: 0;
+        left: 0; } }
+  @media (min-width: 67.5em) {
+    .projects__links--visit {
+      transform: rotateX(-90deg); } }
+  .projects__links--learn {
+    display: none; }
+    @media (min-width: 67.5em) {
+      .projects__links--learn {
+        display: block; } }

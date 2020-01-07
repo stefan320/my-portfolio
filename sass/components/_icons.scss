@@ -24,4 +24,12 @@
   &__fast:hover &__fast--dash {
     transform: translateX(16px);
   }
+
+  ///////////////
+  //RESPONSIVE//
+  //////////////
+
+  &__responsive {
+    transform: translateY(30px);
+  }
 }
