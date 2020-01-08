@@ -17,6 +17,11 @@ const footerText = document.querySelector(".footer__text");
 //   headerLink.style.opacity = "1";
 // });
 
+window.addEventListener("load", () => {
+  body.classList.remove("preload");
+  console.log("loaded");
+});
+
 const headerLogo = document.createElement("img");
 headerLogo.src = "../assets/icons/logo.svg";
 headerLogo.classList.add("header--logo");
