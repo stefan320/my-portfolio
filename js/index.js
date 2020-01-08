@@ -17,20 +17,21 @@ const footerText = document.querySelector(".footer__text");
 //   headerLink.style.opacity = "1";
 // });
 
-var headerLogo = document.createElement("img");
-
+const headerLogo = document.createElement("img");
 headerLogo.src = "../assets/icons/logo.svg";
 headerLogo.classList.add("header--logo");
 headerLogo.alt = "Stefan Cutajar logo";
 
 headerLogo.onload = function() {
   headerOverlay.prepend(headerLogo);
-  animateLineY.style.height = "15rem";
-  animateLineX.style.width = "15rem";
+  setTimeout(function() {
+    animateLineY.style.height = "15rem";
+    animateLineX.style.width = "15rem";
 
-  headerEnter.style.opacity = "1";
-  headerLink.style.opacity = "1";
-  console.log("logo loaded");
+    headerEnter.style.opacity = "1";
+    headerLink.style.opacity = "1";
+    console.log("logo loaded");
+  }, 700);
 };
 
 // NAVIGATION
