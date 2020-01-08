@@ -17,10 +17,10 @@ const footerText = document.querySelector(".footer__text");
 //   headerLink.style.opacity = "1";
 // });
 
-window.addEventListener("load", () => {
-  body.classList.remove("preload");
-  console.log("loaded");
-});
+// window.addEventListener("load", () => {
+//   body.classList.remove("preload");
+//   console.log("loaded");
+// });
 
 const headerLogo = document.createElement("img");
 headerLogo.src = "../assets/icons/logo.svg";
@@ -28,6 +28,7 @@ headerLogo.classList.add("header--logo");
 headerLogo.alt = "Stefan Cutajar logo";
 
 headerLogo.onload = function() {
+  body.classList.remove("preload");
   headerOverlay.prepend(headerLogo);
   setTimeout(function() {
     animateLineY.style.height = "15rem";
