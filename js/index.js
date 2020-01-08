@@ -1,5 +1,5 @@
 const body = document.querySelector("body");
-const headerLogo = document.querySelector(".header--logo");
+const headerOverlay = document.getElementsByClassName("header__overlay")[0];
 const headerEnter = document.querySelector(".header__animation--enter");
 const headerLink = document.querySelector(".header__animation--link");
 const animateLineY = document.querySelector(".header__animation--lineY");
@@ -9,20 +9,30 @@ const navList = document.querySelector(".navigation__list");
 const footerText = document.querySelector(".footer__text");
 
 // Events
-headerLogo.addEventListener("load", () => {
-  // Prevent animations to run before load
-  body.classList.remove("preload");
+// headerLogo.addEventListener("load", () => {
+//   animateLineY.style.height = "15rem";
+//   animateLineX.style.width = "15rem";
+
+//   headerEnter.style.opacity = "1";
+//   headerLink.style.opacity = "1";
+// });
+
+var headerLogo = document.createElement("img");
+
+headerLogo.src = "../assets/icons/logo.svg";
+headerLogo.classList.add("header--logo");
+headerLogo.alt = "Stefan Cutajar logo";
+
+headerLogo.onload = function() {
+  headerOverlay.prepend(headerLogo);
   animateLineY.style.height = "15rem";
   animateLineX.style.width = "15rem";
 
   headerEnter.style.opacity = "1";
   headerLink.style.opacity = "1";
-  console.log("window load");
-});
+  console.log("logo loaded");
+};
 
-headerLogo.addEventListener("load", () => {
-  console.log("header loaded");
-});
 // NAVIGATION
 navList.addEventListener("click", () => {
   navCheckbox.checked = false; //Uncheck the checkbox so the navigation close
