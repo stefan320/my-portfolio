@@ -424,16 +424,29 @@
               </nav>
               <div class="projects__details">
                 <!-- USED ONLY TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
-                <div class="projects__details--first--row--grey"></div> 
+                <div class="projects__details--first--row--grey">
+                  <img src="assets/icons/icon-arrow-fixed.svg" class="projects__details--arrow"  data-reference="blogOverlay" alt="Click to go back">
+                </div>  
                 <h2 class="heading-secondary projects__details--heading">Dorado blog</h2>
-                <div class="projects__details--img projects__details--img--jmb"></div>
+                <div class="projects__details--img projects__details--img--blog"></div>
                 <picture class="projects__details--img--mobile" alt="John Martin Borg landing page screenshot">
-                    <source srcset="assets/images-sm/jmb-400w.jpg" media="(max-width: 47.5em)">
-                    <source srcset="assets/images-sm/jmb-680w.jpg" media="(min-width: 47.6em)">
-                      <img src="assets/images-sm/jmb-680w.jpg" alt="John Martin Borg landing page screenshot">
+                    <source srcset="assets/images-sm/blog-400w.jpg" media="(max-width: 47.5em)">
+                    <source srcset="assets/images-sm/blog-680w.jpg" media="(min-width: 47.6em)">
+                      <img src="assets/images-sm/blog-680w.jpg" alt="Woman scrolling the blog">
                 </picture>
                 <p class="paragraph projects__details--summary">This blog was created as a challenge to try one of the most popular JavaScript framework in the industry, 'Vue.js'. I started by spending a few days learning the technology fundamentals. Following that I dedicated some time to plan the project. In terms of functionality the blog fetches data from an API call in 'JSON' format. Every article is then displayed as a summary of 100 characters. When clicking on an article it will be displayed in full and the possibility to add or remove comments is given. Furthermore the blog includes a filter to provide a better user expereience. For this project I also made sure that no browser refreshing or redirects are needed.</p>
-                <a href="https://vue-blog-f83b1.firebaseapp.com/" class="projects__details--link">Visit Website</a>
+                
+                <div class="projects__links">
+                  <div class="projects__links--container" data-aos="fade-down" data-aos-duration="600">
+                    <h4 class="projects__links--learn" data-reference="blogOverlay">Project details</h4>
+                    <a target="_blank" href="https://vue-blog-f83b1.firebaseapp.com/" class="projects__links--visit">Visit Website</a>
+                  </div>
+                </div>
+    
+                <div class="projects__overlay projects__overlay--blog" id="blogOverlay"></div>
+                <div class="projects__overlay__line projects__overlay__line--y" data-aos="fade-down" data-aos-duration="600" data-aos-offset="250"></div>
+                <div class="projects__overlay__line projects__overlay__line--x" data-aos="fade-left" 
+                data-aos-duration="600" data-aos-offset="50"></div>
             </div>
         </div>
     </main>

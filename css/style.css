@@ -675,6 +675,9 @@ body {
     @media (min-width: 67.5em) {
       .projects__overlay--bmw {
         background-image: url(../../assets/images-md/bmw-landing1150w.jpg); } }
+    @media (min-width: 67.5em) {
+      .projects__overlay--blog {
+        background-image: url(../../assets/images-md/blog-landing1150w.jpg); } }
     .projects__overlay__line {
       display: none; }
       @media (min-width: 67.5em) {
@@ -795,6 +798,9 @@ body {
       @media (min-width: 67.5em) {
         .projects__details--img--bmw {
           background-image: url(../../assets/images-sm/bmw-400w.jpg); } }
+      @media (min-width: 67.5em) {
+        .projects__details--img--blog {
+          background-image: url(../../assets/images-sm/blog-400w.jpg); } }
     .projects__details--summary {
       padding-top: 3.2rem;
       padding-bottom: 3.2rem; }

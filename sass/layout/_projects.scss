@@ -90,6 +90,12 @@
       }
     }
 
+    &--blog {
+      @include respond(tab-land) {
+        background-image: url(../../assets/images-md/blog-landing1150w.jpg);
+      }
+    }
+
     &__line {
       display: none;
 
@@ -218,6 +224,12 @@
       &--bmw {
         @include respond(tab-land) {
           background-image: url(../../assets/images-sm/bmw-400w.jpg);
+        }
+      }
+
+      &--blog {
+        @include respond(tab-land) {
+          background-image: url(../../assets/images-sm/blog-400w.jpg);
         }
       }
     }
