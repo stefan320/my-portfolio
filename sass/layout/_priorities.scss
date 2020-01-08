@@ -24,7 +24,6 @@
 
   &__box {
     @include paddingY;
-    max-width: 70%;
     text-align: center;
 
     @include respond(tab-port) {
@@ -49,7 +48,17 @@
     border: 2px solid rgba($color-grey-light, 0.4);
     border-radius: 15px;
     transition: border 0.4s;
-    height: 15rem;
+    height: 12.5rem;
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-port) {
+      height: 13.5rem;
+    }
+
+    @include respond(desktop) {
+      height: 15rem;
+    }
   }
 
   &--desc:hover {

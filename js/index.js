@@ -9,7 +9,7 @@ const navList = document.querySelector(".navigation__list");
 const footerText = document.querySelector(".footer__text");
 
 // Events
-window.addEventListener("load", () => {
+headerLogo.addEventListener("load", () => {
   // Prevent animations to run before load
   body.classList.remove("preload");
   animateLineY.style.height = "15rem";
@@ -17,8 +17,12 @@ window.addEventListener("load", () => {
 
   headerEnter.style.opacity = "1";
   headerLink.style.opacity = "1";
+  console.log("window load");
 });
 
+headerLogo.addEventListener("load", () => {
+  console.log("header loaded");
+});
 // NAVIGATION
 navList.addEventListener("click", () => {
   navCheckbox.checked = false; //Uncheck the checkbox so the navigation close

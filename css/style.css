@@ -524,7 +524,6 @@ body {
   .priorities__box {
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
-    max-width: 70%;
     text-align: center; }
     @media (min-width: 47.5em) {
       .priorities__box {
@@ -555,7 +554,15 @@ body {
     border: 2px solid rgba(215, 220, 226, 0.4);
     border-radius: 15px;
     transition: border 0.4s;
-    height: 15rem; }
+    height: 12.5rem;
+    display: flex;
+    align-items: center; }
+    @media (min-width: 47.5em) {
+      .priorities--desc {
+        height: 13.5rem; } }
+    @media (min-width: 87.5em) {
+      .priorities--desc {
+        height: 15rem; } }
   .priorities--desc:hover {
     border: 2px solid greenyellow; }
 
