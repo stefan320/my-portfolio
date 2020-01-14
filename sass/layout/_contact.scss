@@ -40,10 +40,15 @@
       width: 100%;
       padding-top: 4px;
       padding-left: 4px;
-      &::placeholder {
-        color: #fff;
-        font-weight: 700;
-      }
+      position: relative;
+    }
+
+    &--label {
+      display: flex;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin: 0.5rem 0 0.8rem;
     }
 
     &--input {

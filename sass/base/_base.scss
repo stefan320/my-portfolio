@@ -156,6 +156,7 @@ body {
 }
 
 // Utilities
-.d-none {
-  display: none !important;
+.hide {
+  opacity: 0;
+  visibility: hidden;
 }

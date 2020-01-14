@@ -6,8 +6,6 @@ AOS.init({
 //Projects
 
 let container = document.querySelectorAll(".projects__links--container");
-const visitLink = document.querySelectorAll("projects__links--visit");
-const learnLink = document.querySelectorAll("projects__links--learn");
 const backArrows = document.querySelectorAll(".projects__details--arrow");
 const jmbOverlay = document.querySelector(".projects__overlay--jmb");
 
@@ -18,7 +16,7 @@ container = Array.from(container);
 container.forEach(e => {
   e.addEventListener("click", ev => {
     projectSelection = ev.target.dataset.reference;
-    document.getElementById(projectSelection).classList.add("d-none");
+    document.getElementById(projectSelection).classList.add("hide");
 
     //rotate the container to show the visit website element
     ev.target.parentNode.children[0].style.transform = "rotateX(-90deg)";
@@ -30,8 +28,9 @@ container.forEach(e => {
 
 backArrows.forEach((e, index) => {
   e.addEventListener("click", ev => {
+    console.log(e);
     projectSelection = ev.target.dataset.reference;
-    document.getElementById(projectSelection).classList.remove("d-none");
+    document.getElementById(projectSelection).classList.remove("hide");
 
     //rotate the container to show the Project Details element
     container[index].children[0].style.transform = "rotateX(0deg)";
