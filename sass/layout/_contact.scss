@@ -14,9 +14,15 @@
 
   &__info {
     font-size: $default-font-size;
+    margin: 0 auto;
+    max-width: 60%;
 
     &--seperator {
-      padding: 0 0.8rem;
+      display: none;
+      @include respond(tab-port) {
+        display: inline-block;
+        padding: 0 0.8rem;
+      }
     }
   }
 
@@ -36,7 +42,9 @@
     &--textarea {
       border: none;
       font-family: inherit;
+      font-size: 1.4rem;
       background-color: $color-secondary;
+      color: #fff;
       width: 100%;
       padding-top: 4px;
       padding-left: 4px;
@@ -53,7 +61,7 @@
 
     &--input {
       margin-bottom: 1rem;
-      padding-bottom: 2rem;
+      padding: 1rem 0;
     }
 
     &--textarea {

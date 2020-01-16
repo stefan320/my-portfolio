@@ -9,18 +9,6 @@ const navList = document.querySelector(".navigation__list");
 const footerText = document.querySelector(".footer__text");
 
 // Events
-// headerLogo.addEventListener("load", () => {
-//   animateLineY.style.height = "15rem";
-//   animateLineX.style.width = "15rem";
-
-//   headerEnter.style.opacity = "1";
-//   headerLink.style.opacity = "1";
-// });
-
-// window.addEventListener("load", () => {
-//   body.classList.remove("preload");
-//   console.log("loaded");
-// });
 
 const headerLogo = document.createElement("img");
 headerLogo.src = "../assets/icons/logo.svg";

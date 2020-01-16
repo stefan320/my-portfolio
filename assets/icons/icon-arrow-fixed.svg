@@ -3,11 +3,12 @@
   <title>Arrow</title>
   <rect fill="none" id="canvas_background" height="91.3" width="96.2" y="-1" x="-1"/>
  </g>
+
  <g>
   <title>Layer 1</title>
-  <g stroke="null" transform="rotate(0.6680563688278198 46.793830871581136,45.12908172607399) " id="svg_1">
-   <circle stroke="null" id="svg_2" r="43.13945" cy="45.12908" cx="46.793831" fill="#F47D20"/>
-   <polyline stroke="#FFFFFF" id="svg_3" points="28.42465103979339,17.293819796293974 69.11587036962737,46.305220019072294 28.42465103979339,75.70865477249026 " stroke-miterlimit="10" stroke-width="3.4239" fill="none"/>
+  <g stroke="null" id="svg_1">
+   <circle stroke="null" id="svg_2" r="43.13945" cy="45.12908" cx="47.793831" fill="#F47D20" transform="rotate(-180 47.79383087158203,45.12908172607422) "/>
+   <polyline stroke="#FFFFFF" id="svg_3" points="20.754392623901367,15.442579627037048 61.44561004638672,44.453983664512634 20.754392623901367,73.85742223262787 " stroke-miterlimit="10" stroke-width="3.4239" fill="none" transform="rotate(-180 41.099998474121094,44.650001525878906) "/>
   </g>
  </g>
 </svg>
