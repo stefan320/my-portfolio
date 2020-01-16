@@ -56,6 +56,24 @@ body {
   width: 4.5rem;
   height: 4.5rem; }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 1.6rem;
+  right: 1.6rem;
+  background-color: transparent;
+  background-image: url("../../assets/icons/icon-arrow-fixed.svg");
+  transform: rotate(90deg);
+  width: 3.2rem;
+  height: 3.2rem;
+  background-size: cover;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 9999; }
+  @media (min-width: 47.5em) {
+    .scroll-to-top {
+      right: 2rem; } }
+
 .hide {
   opacity: 0;
   visibility: hidden; }

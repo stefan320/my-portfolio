@@ -23,7 +23,7 @@
     <title>Stefan Cutajar - Front-End Web Developer</title>
   </head>
   <body class="preload">
-    <header class="header">
+    <header class="header" id="header">
     <canvas class="header--canvas"></canvas>
     <div class="navigation">
           <input type="checkbox" name="navigation--toggle" id="navigation--toggle" class="navigation--toggle">
@@ -189,6 +189,8 @@
           </div>   
       </div>
 
+      <button onclick="scrollToTop()" class="scroll-to-top" title="Scroll to top"></button>
+
       <div class="projects__intro" id="projects">
         <h1 class="heading-primary heading-orange">Projects</h1>
             <picture class="projects__intro--img">
@@ -198,7 +200,7 @@
                   <img src="assets/images-md/superimposed840w.jpg" alt="Websites responsive on all devices">
             </picture>
         <a href="#project--1" class="projects__intro--link"><img src="assets/icons/icon-arrow.svg" alt="Continue and preview our latest projects" class="down--arrow"></a>
-      </div>
+     </div>
 
         <div class="projects__desc projects--blue" id="project--1">
           <nav class="projects__nav" data-aos="fade-down">
@@ -316,7 +318,7 @@
               <source srcset="assets/images-sm/sandwich-house-400w.jpg" media="(max-width: 47.5em)">       <source srcset="assets/images-sm/sandwich-house-680w.jpg" media="(max-width: 64em)">     
                 <img src="assets/images-sm/sandwich-house-680w.jpg" alt="The Sandwich House branding">
             </picture>
-              <p class="paragraph projects__details--summary">This is a fictitious web survey made to collect data from the users to help 'BMW' improve future products and help with  client satisfaction. This survey asks sets of questions and proceeds to the following steps depending on the user's answers. All data submitted is then saved in 'LocalStorage'. For this project I depicted the statistics using graphs to ensure that the information in clearly and easily recorded.</p>
+              <p class="paragraph projects__details--summary">This is a fictitious website called ‘The Sandwich House’. This website portrays an online business targeting customers interested in ordering a sandwich or sandwiches from the comfort of their home or office. The design of the website allows the user to put together the customer’s preferred choice of sandwich. Once the order is complete they will have it delivered to them.</p>
             
             <div class="projects__links">
               <div class="projects__links--container"  data-aos="fade-down" data-aos-duration="600" data-aos-offset="50">
@@ -381,7 +383,7 @@
                     <source srcset="assets/images-sm/bmw-680w.jpg" media="(min-width: 47.6em)">
                       <img src="assets/images-sm/bmw-680w.jpg" alt="BMW interior">
                 </picture>
-                <p class="paragraph projects__details--summary">A fictitious web survey made with the intention to collect data from the users to help 'BMW' to improve future products and it's client’s satisfaction. This survey dynamically asks sets of questions and also ends based on the user answers. All data submitted is then saved in 'LocalStorage'. For this project I decided to show the statistics in graphs to ensure the best user experience is delivered.</p>
+                <p class="paragraph projects__details--summary">This is a fictitious web survey made to collect data from the users to help 'BMW' improve future products and help with client satisfaction. This survey asks sets of questions and proceeds to the following steps depending on the user's answers. All data submitted is then saved in 'LocalStorage'. For this project I depicted the statistics using graphs to ensure that the information in clearly and easily recorded.</p>
                 <div class="projects__links">
                   <div class="projects__links--container"  data-aos="fade-down" data-aos-duration="600" data-aos-offset="50">
                     <h4 class="projects__links--learn" data-reference="bmwOverlay">Project details</h4>
