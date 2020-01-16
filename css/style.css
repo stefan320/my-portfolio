@@ -69,7 +69,9 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  z-index: 9999; }
+  z-index: 9999;
+  transition: all 0.4s;
+  opacity: 0; }
   @media (min-width: 47.5em) {
     .scroll-to-top {
       right: 2rem; } }

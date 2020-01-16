@@ -32,16 +32,21 @@ headerLogo.onload = function() {
 //Get the button:
 const scrollToTopBtn = document.querySelector(".scroll-to-top");
 
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 100px from the top of the document, show the button
 window.onscroll = function() {
   scrollFunction();
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopBtn.style.display = "block";
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollToTopBtn.style.visibility = "visible";
+    scrollToTopBtn.style.opacity = 1;
   } else {
-    scrollToTopBtn.style.display = "none";
+    scrollToTopBtn.style.visibility = "hidden";
+    scrollToTopBtn.style.opacity = 0;
   }
 }
 
@@ -63,9 +68,9 @@ const getCurrentYear = () => {
   return year;
 };
 
-// Replace 2019 from footer in index.html to the current year
+// Replace 10019 from footer in index.html to the current year
 const printCurrentYear = () => {
-  const footerStr = footerText.innerHTML.replace("2019", getCurrentYear());
+  const footerStr = footerText.innerHTML.replace("10019", getCurrentYear());
   footerText.innerHTML = footerStr;
 };
 
