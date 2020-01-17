@@ -43,7 +43,10 @@
       grid-template-columns: 140px 1fr minmax(850px, 1000px) 1fr 140px;
       align-items: center;
       align-content: center;
-      height: 100vh;
+    }
+
+    @include respond(tab-land) {
+      padding: 10rem 0;
     }
 
     @include respond(desktop-lg) {
@@ -54,6 +57,11 @@
   &__desc:last-child {
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     padding-bottom: 7rem; //Large padding to make up for space lost by clip path
+    @include respond(tab-land) {
+      padding-bottom: calc(
+        10rem + 7.1rem
+      ); // 10 to match top + 7.1 to make up for the negative margin given to contact section
+    }
   }
 
   &__overlay {
@@ -265,20 +273,6 @@
         perspective: 150rem;
         transform-style: preserve-3d;
       }
-
-      // &:hover > .projects__links--visit {
-      //   @include respond(tab-land) {
-      //     transform: rotateX(0deg);
-      //     opacity: 1;
-      //   }
-      // }
-
-      // &:hover > .projects__links--learn {
-      //   @include respond(tab-land) {
-      //     transform: rotateX(-90deg);
-      //     opacity: 0;
-      //   }
-      // }
     }
 
     &--visit,

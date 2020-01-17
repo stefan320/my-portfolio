@@ -686,14 +686,19 @@ body {
       display: grid;
       grid-template-columns: 140px 1fr minmax(850px, 1000px) 1fr 140px;
       align-items: center;
-      align-content: center;
-      height: 100vh; } }
+      align-content: center; } }
+  @media (min-width: 67.5em) {
+    .projects__desc {
+      padding: 10rem 0; } }
   @media (min-width: 100em) {
     .projects__desc {
       grid-template-columns: 140px 1fr minmax(1000px, 1200px) 1fr 140px; } }
   .projects__desc:last-child {
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     padding-bottom: 7rem; }
+    @media (min-width: 67.5em) {
+      .projects__desc:last-child {
+        padding-bottom: calc( 10rem + 7.1rem); } }
   .projects__overlay {
     display: none; }
     @media (min-width: 67.5em) {
