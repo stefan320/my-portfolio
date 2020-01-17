@@ -93,7 +93,7 @@ const createLines = () => {
   mtx = 16;
   lty = 16;
 
-  for (let i = 0; i < 220; i++) {
+  for (let i = 0; i < 250; i++) {
     linesArray.push(new Line(mtx, 0, 0, lty, defaultColor));
     linesArray[i].drawLine();
     mtx += 16;
