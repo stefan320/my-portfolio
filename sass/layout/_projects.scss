@@ -80,6 +80,11 @@
       background-position: center top;
       background-repeat: no-repeat;
     }
+    &--cad {
+      @include respond(tab-land) {
+        background-image: url(../../assets/images-md/inventor-screenshot.jpg);
+      }
+    }
 
     &--jmb {
       @include respond(tab-land) {
@@ -154,6 +159,20 @@
       grid-template-columns: 1fr 45% 1fr 40%;
     }
 
+    &--list {
+      font-weight: 700;
+      padding-top: 20px;
+      padding-left: 20px;
+      font-size: 1.6rem;
+      
+      & li {
+        text-align: initial;
+        font-size: inherit;
+        line-height: 1.5;
+        padding-bottom: .5rem;
+      }
+    } 
+
     &--first--row {
       display: none;
       &--blue {
@@ -217,6 +236,12 @@
         grid-row: 1 / -1;
       }
 
+      &--cad {
+        @include respond(tab-land) {
+          background-image: url(../../assets/images-sm/revit-screenshot.jpg);
+        }
+      }
+
       &--jmb {
         @include respond(tab-land) {
           background-image: url(../../assets/images-sm/jmb-400w.jpg);
@@ -249,11 +274,17 @@
         padding: 0;
         grid-row: 3 / 4;
         grid-column: 2/3;
-        color: #000;
         font-size: 1.6rem;
         max-height: 80%;
         overflow-y: scroll;
+        color: $color-primary;
       }
+       .paragraph {
+        @include respond(tab-land) {
+         color: $color-primary;
+
+        }
+       }
     }
   }
 

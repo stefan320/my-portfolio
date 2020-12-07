@@ -78,7 +78,8 @@ body {
 
 .hide {
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  z-index: -1; }
 
 @font-face {
   font-family: akzidenz;
@@ -379,7 +380,7 @@ body {
   margin-top: -14.2rem;
   padding-top: calc( 14.2rem + 3.2rem);
   padding-bottom: 3.2rem;
-  background-color: #09192f;
+  background-color: #464e59;
   text-align: center;
   color: #fff; }
   @media (min-width: 47.5em) {
@@ -394,7 +395,6 @@ body {
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
     color: #f47d20;
-    font-weight: 300;
     font-size: 1.6rem; }
     @media (min-width: 47.5em) {
       .contact--heading {
@@ -451,7 +451,7 @@ body {
         height: 16em; } }
     .contact__form--submit {
       text-transform: uppercase;
-      background-color: #09192f;
+      background-color: inherit;
       border: 1px solid #fff;
       margin: 4.5rem auto;
       color: #fff;
@@ -716,6 +716,9 @@ body {
         background-position: center top;
         background-repeat: no-repeat; } }
     @media (min-width: 67.5em) {
+      .projects__overlay--cad {
+        background-image: url(../../assets/images-md/inventor-screenshot.jpg); } }
+    @media (min-width: 67.5em) {
       .projects__overlay--jmb {
         background-image: url(../../assets/images-md/jmb-landing1150w.png); } }
     @media (min-width: 67.5em) {
@@ -785,6 +788,16 @@ body {
     @media (min-width: 100em) {
       .projects__details {
         grid-template-columns: 1fr 45% 1fr 40%; } }
+    .projects__details--list {
+      font-weight: 700;
+      padding-top: 20px;
+      padding-left: 20px;
+      font-size: 1.6rem; }
+      .projects__details--list li {
+        text-align: initial;
+        font-size: inherit;
+        line-height: 1.5;
+        padding-bottom: .5rem; }
     .projects__details--first--row {
       display: none; }
       @media (min-width: 67.5em) {
@@ -838,6 +851,9 @@ body {
           grid-column: 4 / -1;
           grid-row: 1 / -1; } }
       @media (min-width: 67.5em) {
+        .projects__details--img--cad {
+          background-image: url(../../assets/images-sm/revit-screenshot.jpg); } }
+      @media (min-width: 67.5em) {
         .projects__details--img--jmb {
           background-image: url(../../assets/images-sm/jmb-400w.jpg); } }
       @media (min-width: 67.5em) {
@@ -869,10 +885,13 @@ body {
           padding: 0;
           grid-row: 3 / 4;
           grid-column: 2/3;
-          color: #000;
           font-size: 1.6rem;
           max-height: 80%;
-          overflow-y: scroll; } }
+          overflow-y: scroll;
+          color: #09192f; } }
+      @media (min-width: 67.5em) {
+        .projects__details--summary .paragraph {
+          color: #09192f; } }
   @media (min-width: 67.5em) {
     .projects__links {
       text-align: center;

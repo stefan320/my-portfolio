@@ -1,14 +1,13 @@
 .contact {
   @include wrapper;
   @include retrive-space;
-  background-color: $color-primary;
+  background-color: $color-grey-dark;
   text-align: center;
   color: #fff;
 
   &--heading {
     @include paddingY;
     color: $color-secondary;
-    font-weight: 300;
     font-size: $default-font-size;
   }
 
@@ -72,7 +71,7 @@
 
     &--submit {
       text-transform: uppercase;
-      background-color: $color-primary;
+      background-color: inherit;
       border: 1px solid #fff;
       margin: 4.5rem auto;
       color: #fff;
