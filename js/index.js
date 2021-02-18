@@ -15,16 +15,15 @@ headerLogo.src = "../assets/icons/logo.svg";
 headerLogo.classList.add("header--logo");
 headerLogo.alt = "Stefan Cutajar logo";
 
-headerLogo.onload = function() {
+headerLogo.onload = function () {
   body.classList.remove("preload");
   headerOverlay.prepend(headerLogo);
-  setTimeout(function() {
+  setTimeout(function () {
     animateLineY.style.height = "15rem";
     animateLineX.style.width = "15rem";
 
     headerEnter.style.opacity = "1";
     headerLink.style.opacity = "1";
-    console.log("logo loaded");
   }, 700);
 };
 
@@ -33,7 +32,7 @@ headerLogo.onload = function() {
 const scrollToTopBtn = document.querySelector(".scroll-to-top");
 
 // When the user scrolls down 100px from the top of the document, show the button
-window.onscroll = function() {
+window.onscroll = function () {
   scrollFunction();
 };
 
