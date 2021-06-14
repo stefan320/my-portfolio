@@ -9,7 +9,6 @@ const navList = document.querySelector(".navigation__list");
 const footerText = document.querySelector(".footer__text");
 
 // Events
-
 const headerLogo = document.createElement("img");
 headerLogo.src = "../assets/icons/logo.svg";
 headerLogo.classList.add("header--logo");
