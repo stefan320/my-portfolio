@@ -80,6 +80,13 @@
       background-position: center top;
       background-repeat: no-repeat;
     }
+
+    &--survey {
+      @include respond(tab-land) {
+        background-image: url(../../assets/images-md/dynamic-survey-screenshot.jpg);
+      }
+    }
+
     &--cad {
       @include respond(tab-land) {
         background-image: url(../../assets/images-md/inventor-screenshot.jpg);
@@ -164,14 +171,14 @@
       padding-top: 20px;
       padding-left: 20px;
       font-size: 1.6rem;
-      
+
       & li {
         text-align: initial;
         font-size: inherit;
         line-height: 1.5;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
       }
-    } 
+    }
 
     &--first--row {
       display: none;
@@ -236,6 +243,12 @@
         grid-row: 1 / -1;
       }
 
+      &--survey {
+        @include respond(tab-land) {
+          background-image: url(../../assets/images-sm/dynamic-survey-mobile-screenshot-417w.jpg);
+        }
+      }
+
       &--cad {
         @include respond(tab-land) {
           background-image: url(../../assets/images-sm/revit-screenshot.jpg);
@@ -279,12 +292,11 @@
         overflow-y: scroll;
         color: $color-primary;
       }
-       .paragraph {
+      .paragraph {
         @include respond(tab-land) {
-         color: $color-primary;
-
+          color: $color-primary;
         }
-       }
+      }
     }
   }
 

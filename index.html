@@ -1,552 +1,1003 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-156249534-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156249534-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "UA-156249534-1");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#09192f" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Stefan Cutajar - Front-End Web Developer</title>
+  </head>
 
-    gtag('config', 'UA-156249534-1');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="theme-color" content="#09192f">
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <title>Stefan Cutajar - Front-End Web Developer</title>
-</head>
-
-<body class="preload">
-  <header class="header" id="header">
-    <canvas class="header--canvas"></canvas>
-    <div class="navigation">
-      <input type="checkbox" name="navigation--toggle" id="navigation--toggle" class="navigation--toggle">
-      <label for="navigation--toggle" class="navigation--btn">
-        <span class="navigation--icon"></span>
-      </label>
-      <div class="navigation__background"></div>
-      <nav class="navigation__nav">
-        <ul class="navigation__list">
-          <li class="navigation__list--item"><a class="navigation__list--link" href="#about">About Me</a></li>
-          <li class="navigation__list--item"><a class="navigation__list--link" href="#priorities">Priorities</a></li>
-          <li class="navigation__list--item"><a class="navigation__list--link" href="#projects">Projects</a></li>
-          <li class="navigation__list--item"><a class="navigation__list--link" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__overlay">
-      <!-- THIS IMAGE IS APPENDED DYNAMICALY FROM INDEX.JS WHEN IT LOADS
+  <body class="preload">
+    <header class="header" id="header">
+      <canvas class="header--canvas"></canvas>
+      <div class="navigation">
+        <input
+          type="checkbox"
+          name="navigation--toggle"
+          id="navigation--toggle"
+          class="navigation--toggle"
+        />
+        <label for="navigation--toggle" class="navigation--btn">
+          <span class="navigation--icon"></span>
+        </label>
+        <div class="navigation__background"></div>
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__list--item">
+              <a class="navigation__list--link" href="#about">About Me</a>
+            </li>
+            <li class="navigation__list--item">
+              <a class="navigation__list--link" href="#priorities"
+                >Priorities</a
+              >
+            </li>
+            <li class="navigation__list--item">
+              <a class="navigation__list--link" href="#projects">Projects</a>
+            </li>
+            <li class="navigation__list--item">
+              <a class="navigation__list--link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__overlay">
+        <!-- THIS IMAGE IS APPENDED DYNAMICALY FROM INDEX.JS WHEN IT LOADS
              <img
           src="/assets/icons/logo.svg"
           alt="Stefan Cutajar logo"
           class="header--logo"
         /> -->
-      <div class="header__animation">
-        <div class="header__animation--lineY"></div>
-        <a href="#about" class="header__animation--enter">Enter</a>
-        <div class="header__animation--lineX">
-          <a class="header__animation--link" href="#about"><img class="header__animation--link--img"
-              src="assets/icons/icon-arrow.svg" alt="Enter Website" /></a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="main">
-    <button onclick="scrollToTop()" class="scroll-to-top" title="Scroll to top"></button>
-    <div class="about" id="about">
-      <picture class="about--img">
-        <source srcset="assets/images-lg/about-me-lg.jpg" media="(min-width: 137.5em)">
-        <source srcset="assets/images-lg/about-me_image-lg2200w.jpg" media="(min-width: 137.5em)">
-        <source srcset="assets/images-md/about-me_image-md1200w.jpg" media="(min-width: 59.43em)">
-        <source srcset="assets/images-md/about-me_image-md950w.jpg" media="(min-width: 47.5em)">
-        <source srcset="assets/images-sm/about-me_image760w.jpg" media="(min-width: 37.5em)">
-        <source srcset="assets/images-sm/about-me_image600w.jpg" media="(min-width: 25em)">
-        <source srcset="assets/images-sm/about-me_image400w.jpg" media="(min-width: 1em)">
-        <img src="assets/images-lg/about-me-lg.jpg" alt="Stefan Mountain trekking">
-      </picture>
-      <h1 class="heading-primary about--heading" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        Who&nbsp;is&nbsp;<br>Stefan?</h1>
-      <p class="paragraph about--me">I am a Front-End Web Developer whose passion revolves around bringing designs to
-        life through the use of for UI effects, animations and creating engaging, dynamic user experiences. All websites
-        are responsive on all devices no matter what the size. I enjoy developing rich web experiences. When I get the
-        chance, I enjoy travelling and exploring nature.</p>
-      <h2 class="heading-secondary pdx-md about--cta">Interested? Get in touch and<br> let’s make some magic!</h2>
-      <img src="/assets/icons/logo.svg" alt="Stefan Cutajar logo" class="about--logo" />
-    </div>
-
-    <div id="priorities" class="priorities">
-      <h1 class="heading-primary heading-orange priorities--title" data-aos="fade-right">Priorities</h1>
-
-      <!-- DIVERSE ICON SECTION -->
-      <div class="priorities__box" data-aos="zoom-in-up">
-        <svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
-          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="175.2px" height="210px"
-          viewBox="0 0 175.2 189" enable-background="new 0 0 175.2 189" xml:space="preserve">
-          <g>
-            <g>
-              <path fill-rule="evenodd" clip-rule="evenodd" fill="#F47D20" d="M81,79.9c21.8,8.6,33.5-32.1,16.5-42.8c-3.6-2.2-8.5-3-14.3-2.2
-                  C61.1,37.8,64.5,73.4,81,79.9z" />
-              <path fill-rule="evenodd" clip-rule="evenodd" fill="#F47D20" d="M129.2,108.9c-2.7-4.8-16-10.1-21-12.9
-                  c-6.9-3.9-18.1-13.1-25-10.7c-7.2,2.5-12.8,6.9-21,11.6c-5.2,3-17.5,8.2-19.6,12.9c-4.3,9.7,1,15.4-0.4,26.4
-                  c27.2,1.5,60.6,1.5,87.8,0C128.7,125.8,134,117.6,129.2,108.9z" />
-            </g>
-            <g>
-              <path fill="#F47D20" d="M127.5,14.4L134.9,0L99.3,7.4l13.8,35.1l8.7-16.9c9.3,4.8,17.7,11.6,24.3,19.8c10.7,13.3,16.6,30,16.6,47
-                  c0,17-5.9,33.7-16.6,47c-10.3,12.8-24.7,22-40.6,25.9l-1.9,0.5v12.9l3-0.7c39.8-8.8,68.7-44.8,68.7-85.6
-                  C175.2,59.7,156.6,29.3,127.5,14.4z" />
-              <path fill="#F47D20" d="M53.6,159.2c-9.4-4.8-17.8-11.6-24.4-19.8c-10.7-13.3-16.6-30-16.6-47c0-17,5.9-33.7,16.6-47
-                  c10.3-12.8,24.7-22,40.6-25.9l1.9-0.5V6.2l-3,0.7C28.9,15.6,0,51.6,0,92.4c0,33.4,19.2,64.1,49.2,78.7L42.7,189l34.1-12.1
-                  l-17.7-33L53.6,159.2z" />
-            </g>
-          </g>
-        </svg>
-        <h2 class="heading-secondary priorities__box--heading">Diverse</h2>
-        <p class="priorities--desc">Each project is developed for the client’s individual needs, making sure it is user
-          friendly and tailored to it's target audience.</p>
-      </div>
-
-      <!-- FAST ICON SECTION -->
-      <div class="priorities__box" data-aos="zoom-in-up">
-        <svg version="1.1" id="Layer_1" class="icon icon__fast" xmlns:x="&ns_extend;" xmlns:i="&ns_ai"
-          xmlns:graph="&ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="214.2px" height="210px"
-          viewBox="0 0 214.2 223.6" enable-background="new 0 0 214.2 223.6" xml:space="preserve">
-          <g>
-            <path fill="#F47D20" d="M119.5,34.3c-33.2,0-62.4,17.1-79.3,43H59c14.6-17.1,36.3-28,60.6-28c43.9,0,79.7,35.7,79.7,79.7
-                  c0,43.9-35.7,79.7-79.7,79.7c-24.2,0-45.9-10.9-60.6-28H40.2c16.9,25.9,46.1,43,79.3,43c52.2,0,94.7-42.5,94.7-94.7
-                  S171.7,34.3,119.5,34.3z" />
-            <g class="icon__fast--regulator--tip">
-              <rect x="95.7" y="0" fill="#F47D20" width="47" height="9" />
-              <rect x="114.7" y="4.5" fill="#F47D20" width="9" height="37" />
-            </g>
-            <circle fill="#F47D20" cx="119.2" cy="132.3" r="16.5" />
-            <path fill="#F47D20" class="icon__fast--dash" d="M57.5,94.9c1.9,0,3.5,2,3.5,4.6l0,0c0,2.5-1.6,4.6-3.5,4.6H3.5c-1.9,0-3.5-2-3.5-4.6l0,0
-                  c0-2.5,1.6-4.6,3.5-4.6H57.5z" />
-            <path fill="#F47D20" class="icon__fast--dash" d="M57.5,152.3c1.9,0,3.5,2,3.5,4.6l0,0c0,2.5-1.6,4.6-3.5,4.6H3.5c-1.9,0-3.5-2-3.5-4.6l0,0
-                  c0-2.5,1.6-4.6,3.5-4.6H57.5z" />
-            <path fill="#F47D20" d="M75.8,123.6c1.9,0,3.5,2,3.5,4.6l0,0c0,2.5-1.6,4.6-3.5,4.6H21.7c-1.9,0-3.5-2-3.5-4.6l0,0
-                  c0-2.5,1.6-4.6,3.5-4.6H75.8z" />
-            <path fill="#F47D20" class="icon__fast--arrow" d="M151.1,96.7c1.4-1.4,3.9-1,5.7,0.8l0,0c1.8,1.8,2.1,4.3,0.8,5.7l-37.9,36.6c-1.4,1.4-3.9,1-5.7-0.8l0,0
-                  c-1.8-1.8-2.1-4.3-0.8-5.7L151.1,96.7z" />
-          </g>
-        </svg>
-
-        <h2 class="heading-secondary priorities__box--heading">Fast</h2>
-        <p class="priorities--desc">Speed is key when a website is loading on any device. Every page is tested by the
-          best tools and then optimised to deliver the best perfomance.</p>
-      </div>
-
-      <!-- RESPONSIVE ICON SECTION -->
-      <div class="priorities__box" data-aos="zoom-in-up">
-        <svg class="icon icon__responsive" width="225.6" height="210" xmlns="http://www.w3.org/2000/svg">
-          <g>
-            <rect fill="none" height="402" width="582" y="-1" x="-1" />
-          </g>
-          <g>
-            <g id="svg_1">
-              <path id="svg_2"
-                d="m123.9,142l-42,0c1.7,12.6 -10.9,18.8 -10.9,18.8l63.2,0c-11,-4.1 -10.3,-18.8 -10.3,-18.8z"
-                fill="#F47D20" />
-              <g id="svg_3">
-                <circle id="svg_4" r="5.8" cy="124.6" cx="102.6" fill="none" />
-                <circle id="svg_5" r="5.8" cy="124.6" cx="102.6" fill="none" />
-                <path id="svg_6"
-                  d="m195.5,0l-185.8,0c-5.3,0 -9.7,4.4 -9.7,9.7l0,118.6c0,5.3 4.4,9.7 9.7,9.7l164.5,0l0,-25.3l-151.9,0c-5.3,0 -9.7,-4.4 -9.7,-9.7l0,-79.3c0,-5.3 4.4,-9.7 9.7,-9.7l160.5,0c5.3,0 9.7,4.4 9.7,9.7l0,44.5l12.6,0l0,-58.5c0.1,-5.3 -4.3,-9.7 -9.6,-9.7zm-92.9,118.8c3.2,0 5.8,2.6 5.8,5.8c0,3.2 -2.6,5.8 -5.8,5.8c-3.2,0 -5.8,-2.6 -5.8,-5.8c0,-3.2 2.6,-5.8 5.8,-5.8z"
-                  fill="#F47D20" />
-              </g>
-              <path
-                d="m217.9,70.9l-12.7,0l-12.6,0l-7.9,0c-4.3,0 -7.8,3.6 -7.8,8l0,33.8l0,25.3l0,15c0,4.4 3.5,8 7.8,8l33.3,0c4.3,0 7.8,-3.6 7.8,-8l0,-74.1c-0.2,-4.4 -3.6,-8 -7.9,-8zm-21.6,7.8l8.9,0l1,0l0,2l-1,0l-8.9,0l0,-2zm4.9,78.5c-2.2,0 -3.9,-1.8 -3.9,-3.9s1.8,-3.9 3.9,-3.9s3.9,1.8 3.9,3.9s-1.7,3.9 -3.9,3.9zm18.6,-10.8l-37.2,0l0,-8.5l0,-25.3l0,-24.8l9.9,0l12.6,0l14.7,0l0,58.6z"
-                fill="#F47D20" id="path-1" />
-            </g>
-          </g>
-        </svg>
-        <h2 class="heading-secondary priorities__box--heading">Responsive</h2>
-        <p class="priorities--desc">Internet traffic from mobile devices is constantly increasing. This is why I
-          carefully test that all websites are responsive and can perform on all devices no matter what their size.</p>
-      </div>
-
-      <!-- DYNAMIC ICON SECTION -->
-      <div class="priorities__box" data-aos="zoom-in-up">
-        <svg class="icon" width="123.9" height="210" xmlns="http://www.w3.org/2000/svg">
-          <g>
-            <rect fill="none" height="402" width="582" y="-1" x="-1" />
-          </g>
-          <g>
-            <title>Layer 1</title>
-            <g id="svg_1">
-              <path
-                d="m20.7,19.6c-18,22.5 -14.4,55.6 8.1,73.7c5.8,4.6 12.2,7.8 19,9.7c0.2,-3.1 0.3,-6.2 0.5,-9.4c-4.9,-1.6 -9.5,-4 -13.7,-7.4c-18.6,-15 -21.6,-42.3 -6.7,-60.9c14.9,-18.5 42.2,-21.5 60.7,-6.6c18.6,14.9 21.6,42.1 6.7,60.7c-5.2,6.4 -11.8,11 -19.1,13.6c0,1.5 0.1,3.1 0.2,4.6c0.1,1.7 0.1,3.3 0.2,5c9.9,-2.9 19,-8.8 25.9,-17.4c18.1,-22.5 14.4,-55.6 -8.1,-73.7c-22.5,-18.1 -55.6,-14.4 -73.7,8.1z"
-                id="svg_3" fill="#F47D20" />
-              <path id="svg_2"
-                d="m62.5,57.4c-2.9,0.2 -5.4,1.4 -6.9,3.2l-0.1,0.1c-1.8,2.3 -2.2,10.9 -2.4,15.9c0,0.1 0,0.3 0,0.4c-0.1,1.7 -0.1,3.1 -0.2,4.2c0,0.5 -0.1,1 -0.1,1.5c-0.4,4.1 -0.6,8 -0.9,11.8c-0.2,3.1 -0.3,6.2 -0.5,9.3c0,0.1 0,0.1 0,0.2c-0.4,6.8 -0.7,13.8 -1.4,21.6c-0.1,0.6 -0.1,1.2 -0.2,1.9c-0.6,7 -1.3,15.8 -5.5,20.3c-2.8,3 -5.7,4.2 -8.6,3.6c-6.4,-1.2 -10.3,-11 -12.4,-16.3c-0.3,-0.8 -0.6,-1.5 -0.8,-2c-0.7,-1.4 -1.2,-3 -1.8,-4.5c-1.7,-4.3 -3.4,-8.8 -6.7,-11c-2.3,-1.5 -9.4,-1.2 -12.5,2.8c-0.8,1 -1.3,2.2 -1.5,3.6c-0.1,4.5 2.6,10.4 5.3,16.1c1.1,2.3 2.2,4.6 3.1,6.8c6.8,16.7 12.5,30.7 18.9,46.2c3.5,8.6 15.2,30.7 21.9,34.6c8.1,4.8 33.1,4 40.5,3.2c5.9,-0.6 6.8,-4.6 12.8,-12.1c5.3,-6.6 13.5,-29.2 14.5,-32.5c2.5,-8.1 5,-16.5 6.1,-25.8c0.6,-5.5 2.5,-22.1 -2.7,-33c-5.6,-11.9 -18.8,-12.7 -26.6,-13.2l-0.5,0c-7.3,-0.4 -8.9,-0.3 -11.3,-0.2c-1.5,0.1 -3.4,0.2 -7.2,0.3l-1.9,0l0.1,-1.9c0.1,-3 0.1,-6 0,-8.9c-0.1,-1.9 -0.1,-3.8 -0.2,-5.8c0,-1.2 -0.1,-2.4 -0.1,-3.6c-0.1,-2.8 -0.2,-5.6 -0.2,-8.7c0,-1.1 0.1,-2.2 0.2,-3.4c0.1,-1.1 0.2,-2.3 0.3,-3.5c0.1,-0.9 0.2,-1.9 0.3,-2.8c0.5,-6 0.7,-12.7 -2.6,-15.8c-2.1,-1.9 -5,-2.8 -8.2,-2.6z"
-                fill="#F47D20" />
-              <path id="svg_4"
-                d="m81.4,27.7c-13.6,-10.9 -33.5,-8.7 -44.4,4.9c-10.9,13.6 -8.7,33.5 4.9,44.4c2.3,1.8 4.8,3.3 7.4,4.4c0,-0.2 0,-0.3 0,-0.5c0.1,-1.1 0.2,-2.7 0.2,-4.4c0,-0.3 0,-0.7 0,-1c-1.5,-0.8 -2.9,-1.7 -4.2,-2.8c-11.2,-9 -13,-25.4 -4,-36.6c9,-11.2 25.4,-13 36.6,-4c11.2,9 13,25.4 4,36.6c-1.5,1.8 -3.1,3.4 -4.9,4.7c-0.6,0.5 -1.3,0.9 -1.9,1.3c-0.2,2.3 -0.4,4.5 -0.6,6.5c0.7,-0.3 1.3,-0.6 1.9,-0.9c3.7,-2 7,-4.7 9.8,-8.1c10.9,-13.7 8.8,-33.6 -4.8,-44.5z"
-                fill="#F47D20" />
-            </g>
-          </g>
-        </svg>
-
-        <h2 class="heading-secondary priorities__box--heading">Dynamic</h2>
-        <p class="priorities--desc">Use of animation makes the website experience more exciting and interactive.</p>
-      </div>
-    </div>
-
-    <div class="projects__intro" id="projects">
-      <h1 class="heading-primary heading-orange">Projects</h1>
-      <picture class="projects__intro--img">
-        <source srcset="assets/images-sm/superimposed346w.jpg" media="(max-width: 47.5em)">
-        <source srcset="assets/images-sm/superimposed600w.jpg" media="(max-width: 64em)">
-        <source srcset="assets/images-md/superimposed840w.jpg" media="(min-width: 64.01em)">
-
-        <img src="assets/images-md/superimposed840w.jpg" alt="Websites responsive on all devices">
-      </picture>
-      <a href="#project--1" class="projects__intro--link"><img src="assets/icons/icon-arrow.svg"
-          alt="Continue and preview our latest projects" class="down--arrow"></a>
-    </div>
-
-    <div class="projects__desc projects--blue" id="project--1">
-      <nav class="projects__nav" data-aos="fade-down">
-        <ul class="projects__nav--list">
-          <li class="projects__nav__li">
-            <a href="#project--1" class="projects__nav__li--link">
-              <div class="projects__nav__li--line projects__nav__li--selected"></div>
-              <div class="projects__nav__li__number">
-                1&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--2" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                2&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--3" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                3&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--4" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                4&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--5" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                5&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="projects__details">
-        <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
-        <div class="projects__details--first--row--blue">
-          <img src="assets/icons/icon-arrow-fixed.svg" class="projects__details--arrow" data-reference="cadOverlay"
-            alt="Click to go back">
-        </div>
-        <h2 class="heading-secondary projects__details--heading">CAD Point Malta</h2>
-        <div class="projects__details--img projects__details--img--cad"></div>
-        <!-- Picture element used for screens smaller than 64em only -->
-        <picture class="projects__details--img--mobile">
-          <!-- <source srcset="assets/images-sm/jmb-400w.jpg" media="(max-width: 47.5em)">
-          <source srcset="assets/images-sm/jmb-680w.jpg" media="(max-width: 64em)"> -->
-          <img src="assets/images-sm/vray-maya-screenshot-mob.jpg"
-            alt="CAD point malta V-ray for Maya product screenshot">
-        </picture>
-        <div class="projects__details--summary">
-          <p class="paragraph color-primary">I was approached by CADPoint Malta who needed a website revamp for
-            their business. This project was a custom developed e-commerce website, where I was responsible for all web
-            development.CadPoint Malta consists of selling subscriptions of software products for Autodesk, Adobe and
-            V-Ray. It also offers training in specific software. This website was developed to work seamlessly on
-            mobile, tablet and desktop screens.</p>
-        </div>
-        <div class="projects__links">
-          <div class="projects__links--container" data-aos="fade-down" data-aos-duration="600" data-aos-offset="50">
-            <h4 class="projects__links--learn" data-reference="cadOverlay">Project details</h4>
-            <a target="_blank" href="https://cadpoint-malta.com" class="projects__links--visit">Visit Website</a>
+        <div class="header__animation">
+          <div class="header__animation--lineY"></div>
+          <a href="#about" class="header__animation--enter">Enter</a>
+          <div class="header__animation--lineX">
+            <a class="header__animation--link" href="#about"
+              ><img
+                class="header__animation--link--img"
+                src="assets/icons/icon-arrow.svg"
+                alt="Enter Website"
+            /></a>
           </div>
         </div>
-
-        <div class="projects__overlay projects__overlay--cad" id="cadOverlay"></div>
-        <div class="projects__overlay__line projects__overlay__line--y" data-aos="fade-down" data-aos-duration="600"
-          data-aos-offset="250"></div>
-        <div class="projects__overlay__line projects__overlay__line--x" data-aos="fade-left" data-aos-duration="600"
-          data-aos-offset="50"></div>
       </div>
-    </div>
-    <!-- Cad point End -->
-    <!-- JMB -->
-    <div class="projects__desc projects--grey" id="project--2">
-      <nav class="projects__nav" data-aos="fade-down">
-        <ul class="projects__nav--list">
-          <li class="projects__nav__li">
-            <a href="#project--1" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                1&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--2" class="projects__nav__li--link">
-              <div class="projects__nav__li--line  projects__nav__li--selected"></div>
-              <div class="projects__nav__li__number">
-                2&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--3" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                3&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--4" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                4&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--5" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                5&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </nav>
+    </header>
 
-
-      <div class="projects__details">
-        <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
-        <div class="projects__details--first--row--grey">
-          <img src="assets/icons/icon-arrow-fixed.svg" class="projects__details--arrow" data-reference="jmbOverlay"
-            alt="Click to go back">
-        </div>
-        <h2 class="heading-secondary projects__details--heading">John martin borg</h2>
-        <div class="projects__details--img projects__details--img--jmb"></div>
-        <!-- Picture element used for screens smaller than 64em only -->
-        <picture class="projects__details--img--mobile">
-          <source srcset="assets/images-sm/jmb-400w.jpg" media="(max-width: 47.5em)">
-          <source srcset="assets/images-sm/jmb-680w.jpg" media="(max-width: 64em)">
-          <img src="assets/images-sm/jmb-680w.jpg" alt="John Martin Borg landing page screenshot">
+    <main class="main">
+      <button
+        onclick="scrollToTop()"
+        class="scroll-to-top"
+        title="Scroll to top"
+      ></button>
+      <div class="about" id="about">
+        <picture class="about--img">
+          <source
+            srcset="assets/images-lg/about-me_image-lg2200w.jpg"
+            media="(min-width: 137.5em)"
+          />
+          <source
+            srcset="assets/images-md/about-me_image-md1200w.jpg"
+            media="(min-width: 59.43em)"
+          />
+          <source
+            srcset="assets/images-md/about-me_image-md950w.jpg"
+            media="(min-width: 47.5em)"
+          />
+          <source
+            srcset="assets/images-sm/about-me_image760w.jpg"
+            media="(min-width: 37.5em)"
+          />
+          <source
+            srcset="assets/images-sm/about-me_image600w.jpg"
+            media="(min-width: 25em)"
+          />
+          <source
+            srcset="assets/images-sm/about-me_image400w.jpg"
+            media="(min-width: 1em)"
+          />
+          <img
+            src="assets/images-lg/about-me-lg.jpg"
+            alt="Stefan Mountain trekking"
+          />
         </picture>
-
-        <p class="paragraph color-primary  projects__details--summary">This website illustrates a portfolio for the
-          Maltese artist,
-          John Martin Borg. It showcases a selection of the artist's beautiful works. After the theme was completed I
-          integrated the website with WordPress CMS using 'PHP'. The design was handed to me as a mockup which I then
-          then developed into fully functioning website.</p>
-        <div class="projects__links">
-          <div class="projects__links--container" data-aos="fade-down" data-aos-duration="600" data-aos-offset="50">
-            <h4 class="projects__links--learn" data-reference="jmbOverlay">Project details</h4>
-            <a target="_blank" href="https://johnmartinborg.com" class="projects__links--visit">Visit Website</a>
-          </div>
-        </div>
-
-        <div class="projects__overlay projects__overlay--jmb" id="jmbOverlay"></div>
-        <div class="projects__overlay__line projects__overlay__line--y" data-aos="fade-down" data-aos-duration="600"
-          data-aos-offset="250"></div>
-        <div class="projects__overlay__line projects__overlay__line--x" data-aos="fade-left" data-aos-duration="600"
-          data-aos-offset="50"></div>
-      </div>
-    </div>
-    <!-- The Sandwich House -->
-    <div class="projects__desc projects--blue" id="project--3">
-      <nav class="projects__nav" data-aos="fade-down">
-        <ul class="projects__nav--list">
-          <li class="projects__nav__li">
-            <a href="#project--1" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                1&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--2" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                2&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--3" class="projects__nav__li--link">
-              <div class="projects__nav__li--line projects__nav__li--selected"></div>
-              <div class="projects__nav__li__number">
-                3&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--4" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                4&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--5" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                5&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="projects__details">
-        <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
-        <div class="projects__details--first--row--blue">
-          <img src="assets/icons/icon-arrow-fixed.svg" class="projects__details--arrow" data-reference="sandwichOverlay"
-            alt="Click to go back">
-        </div>
-        <h2 class="heading-secondary  projects__details--heading">The Sandwich House</h2>
-        <div class="projects__details--img projects__details--img--tsh"></div>
-        <!-- Picture element used for screens smaller than 64em only -->
-        <picture class="projects__details--img--mobile">
-          <source srcset="assets/images-sm/sandwich-house-400w.jpg" media="(max-width: 47.5em)">
-          <source srcset="assets/images-sm/sandwich-house-680w.jpg" media="(max-width: 64em)">
-          <img src="assets/images-sm/sandwich-house-680w.jpg" alt="The Sandwich House branding">
-        </picture>
-        <p class="paragraph projects__details--summary  color-primary">This is a fictitious website called ‘The Sandwich
-          House’. This website portrays an online business targeting customers interested in ordering a sandwich or
-          sandwiches from the comfort of their home or office. The design of the website allows the user to put together
-          the customer’s preferred choice of sandwich. Once the order is complete they will have it delivered to them.
+        <h1
+          class="heading-primary about--heading"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          Who&nbsp;is&nbsp;<br />Stefan?
+        </h1>
+        <p class="paragraph about--me">
+          I am a Front-End Web Developer whose passion revolves around bringing
+          designs to life through the use of for UI effects, animations and
+          creating engaging, dynamic user experiences. All websites are
+          responsive on all devices no matter what the size. I enjoy developing
+          rich web experiences. When I get the chance, I enjoy travelling and
+          exploring nature.
         </p>
-
-        <div class="projects__links">
-          <div class="projects__links--container" data-aos="fade-down" data-aos-duration="600" data-aos-offset="50">
-            <h4 class="projects__links--learn" data-reference="sandwichOverlay">Project details</h4>
-            <a target="_blank" href="https://stefan320.github.io/sandwich-house/" class="projects__links--visit">Visit
-              Website</a>
-          </div>
-        </div>
-
-        <div class="projects__overlay projects__overlay--sandwich" id="sandwichOverlay"></div>
-        <div class="projects__overlay__line projects__overlay__line--y" data-aos="fade-down" data-aos-duration="600"
-          data-aos-offset="250"></div>
-        <div class="projects__overlay__line projects__overlay__line--x" data-aos="fade-left" data-aos-duration="600"
-          data-aos-offset="50"></div>
+        <h2 class="heading-secondary pdx-md about--cta">
+          Interested? Get in touch and<br />
+          let’s make some magic!
+        </h2>
+        <img
+          src="/assets/icons/logo.svg"
+          alt="Stefan Cutajar logo"
+          class="about--logo"
+        />
       </div>
-    </div>
-    <!-- BMW -->
-    <div class="projects__desc projects--grey" id="project--4">
-      <nav class="projects__nav" data-aos="fade-down">
-        <ul class="projects__nav--list">
-          <li class="projects__nav__li">
-            <a href="#project--1" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                1&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--2" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                2&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--3" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                3&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--4" class="projects__nav__li--link">
-              <div class="projects__nav__li--line projects__nav__li--selected"></div>
-              <div class="projects__nav__li__number">
-                4&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-          <li class="projects__nav__li">
-            <a href="#project--5" class="projects__nav__li--link">
-              <div class="projects__nav__li--line"></div>
-              <div class="projects__nav__li__number">
-                5&sol;<span class="projects__nav__li__number--last">5</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="projects__details">
-        <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
-        <div class="projects__details--first--row--grey">
-          <img src="assets/icons/icon-arrow-fixed.svg" class="projects__details--arrow" data-reference="bmwOverlay"
-            alt="Click to go back">
+
+      <div id="priorities" class="priorities">
+        <h1
+          class="heading-primary heading-orange priorities--title"
+          data-aos="fade-right"
+        >
+          Priorities
+        </h1>
+
+        <!-- DIVERSE ICON SECTION -->
+        <div class="priorities__box" data-aos="zoom-in-up">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns:x="&ns_extend;"
+            xmlns:i="&ns_ai;"
+            xmlns:graph="&ns_graphs;"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+            x="0px"
+            y="0px"
+            width="175.2px"
+            height="210px"
+            viewBox="0 0 175.2 189"
+            enable-background="new 0 0 175.2 189"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  fill="#F47D20"
+                  d="M81,79.9c21.8,8.6,33.5-32.1,16.5-42.8c-3.6-2.2-8.5-3-14.3-2.2
+                  C61.1,37.8,64.5,73.4,81,79.9z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  fill="#F47D20"
+                  d="M129.2,108.9c-2.7-4.8-16-10.1-21-12.9
+                  c-6.9-3.9-18.1-13.1-25-10.7c-7.2,2.5-12.8,6.9-21,11.6c-5.2,3-17.5,8.2-19.6,12.9c-4.3,9.7,1,15.4-0.4,26.4
+                  c27.2,1.5,60.6,1.5,87.8,0C128.7,125.8,134,117.6,129.2,108.9z"
+                />
+              </g>
+              <g>
+                <path
+                  fill="#F47D20"
+                  d="M127.5,14.4L134.9,0L99.3,7.4l13.8,35.1l8.7-16.9c9.3,4.8,17.7,11.6,24.3,19.8c10.7,13.3,16.6,30,16.6,47
+                  c0,17-5.9,33.7-16.6,47c-10.3,12.8-24.7,22-40.6,25.9l-1.9,0.5v12.9l3-0.7c39.8-8.8,68.7-44.8,68.7-85.6
+                  C175.2,59.7,156.6,29.3,127.5,14.4z"
+                />
+                <path
+                  fill="#F47D20"
+                  d="M53.6,159.2c-9.4-4.8-17.8-11.6-24.4-19.8c-10.7-13.3-16.6-30-16.6-47c0-17,5.9-33.7,16.6-47
+                  c10.3-12.8,24.7-22,40.6-25.9l1.9-0.5V6.2l-3,0.7C28.9,15.6,0,51.6,0,92.4c0,33.4,19.2,64.1,49.2,78.7L42.7,189l34.1-12.1
+                  l-17.7-33L53.6,159.2z"
+                />
+              </g>
+            </g>
+          </svg>
+          <h2 class="heading-secondary priorities__box--heading">Diverse</h2>
+          <p class="priorities--desc">
+            Each project is developed for the client’s individual needs, making
+            sure it is user friendly and tailored to it's target audience.
+          </p>
         </div>
-        <h2 class="heading-secondary projects__details--heading">BMW Survey</h2>
-        <div class="projects__details--img projects__details--img--bmw"></div>
-        <picture class="projects__details--img--mobile">
-          <source srcset="assets/images-sm/bmw-400w.jpg" media="(max-width: 47.5em)">
-          <source srcset="assets/images-sm/bmw-680w.jpg" media="(min-width: 47.6em)">
-          <img src="assets/images-sm/bmw-680w.jpg" alt="BMW interior">
+
+        <!-- FAST ICON SECTION -->
+        <div class="priorities__box" data-aos="zoom-in-up">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            class="icon icon__fast"
+            xmlns:x="&ns_extend;"
+            xmlns:i="&ns_ai"
+            xmlns:graph="&ns_graphs;"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+            x="0px"
+            y="0px"
+            width="214.2px"
+            height="210px"
+            viewBox="0 0 214.2 223.6"
+            enable-background="new 0 0 214.2 223.6"
+            xml:space="preserve"
+          >
+            <g>
+              <path
+                fill="#F47D20"
+                d="M119.5,34.3c-33.2,0-62.4,17.1-79.3,43H59c14.6-17.1,36.3-28,60.6-28c43.9,0,79.7,35.7,79.7,79.7
+                  c0,43.9-35.7,79.7-79.7,79.7c-24.2,0-45.9-10.9-60.6-28H40.2c16.9,25.9,46.1,43,79.3,43c52.2,0,94.7-42.5,94.7-94.7
+                  S171.7,34.3,119.5,34.3z"
+              />
+              <g class="icon__fast--regulator--tip">
+                <rect x="95.7" y="0" fill="#F47D20" width="47" height="9" />
+                <rect x="114.7" y="4.5" fill="#F47D20" width="9" height="37" />
+              </g>
+              <circle fill="#F47D20" cx="119.2" cy="132.3" r="16.5" />
+              <path
+                fill="#F47D20"
+                class="icon__fast--dash"
+                d="M57.5,94.9c1.9,0,3.5,2,3.5,4.6l0,0c0,2.5-1.6,4.6-3.5,4.6H3.5c-1.9,0-3.5-2-3.5-4.6l0,0
+                  c0-2.5,1.6-4.6,3.5-4.6H57.5z"
+              />
+              <path
+                fill="#F47D20"
+                class="icon__fast--dash"
+                d="M57.5,152.3c1.9,0,3.5,2,3.5,4.6l0,0c0,2.5-1.6,4.6-3.5,4.6H3.5c-1.9,0-3.5-2-3.5-4.6l0,0
+                  c0-2.5,1.6-4.6,3.5-4.6H57.5z"
+              />
+              <path
+                fill="#F47D20"
+                d="M75.8,123.6c1.9,0,3.5,2,3.5,4.6l0,0c0,2.5-1.6,4.6-3.5,4.6H21.7c-1.9,0-3.5-2-3.5-4.6l0,0
+                  c0-2.5,1.6-4.6,3.5-4.6H75.8z"
+              />
+              <path
+                fill="#F47D20"
+                class="icon__fast--arrow"
+                d="M151.1,96.7c1.4-1.4,3.9-1,5.7,0.8l0,0c1.8,1.8,2.1,4.3,0.8,5.7l-37.9,36.6c-1.4,1.4-3.9,1-5.7-0.8l0,0
+                  c-1.8-1.8-2.1-4.3-0.8-5.7L151.1,96.7z"
+              />
+            </g>
+          </svg>
+
+          <h2 class="heading-secondary priorities__box--heading">Fast</h2>
+          <p class="priorities--desc">
+            Speed is key when a website is loading on any device. Every page is
+            tested by the best tools and then optimised to deliver the best
+            perfomance.
+          </p>
+        </div>
+
+        <!-- RESPONSIVE ICON SECTION -->
+        <div class="priorities__box" data-aos="zoom-in-up">
+          <svg
+            class="icon icon__responsive"
+            width="225.6"
+            height="210"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <rect fill="none" height="402" width="582" y="-1" x="-1" />
+            </g>
+            <g>
+              <g id="svg_1">
+                <path
+                  id="svg_2"
+                  d="m123.9,142l-42,0c1.7,12.6 -10.9,18.8 -10.9,18.8l63.2,0c-11,-4.1 -10.3,-18.8 -10.3,-18.8z"
+                  fill="#F47D20"
+                />
+                <g id="svg_3">
+                  <circle
+                    id="svg_4"
+                    r="5.8"
+                    cy="124.6"
+                    cx="102.6"
+                    fill="none"
+                  />
+                  <circle
+                    id="svg_5"
+                    r="5.8"
+                    cy="124.6"
+                    cx="102.6"
+                    fill="none"
+                  />
+                  <path
+                    id="svg_6"
+                    d="m195.5,0l-185.8,0c-5.3,0 -9.7,4.4 -9.7,9.7l0,118.6c0,5.3 4.4,9.7 9.7,9.7l164.5,0l0,-25.3l-151.9,0c-5.3,0 -9.7,-4.4 -9.7,-9.7l0,-79.3c0,-5.3 4.4,-9.7 9.7,-9.7l160.5,0c5.3,0 9.7,4.4 9.7,9.7l0,44.5l12.6,0l0,-58.5c0.1,-5.3 -4.3,-9.7 -9.6,-9.7zm-92.9,118.8c3.2,0 5.8,2.6 5.8,5.8c0,3.2 -2.6,5.8 -5.8,5.8c-3.2,0 -5.8,-2.6 -5.8,-5.8c0,-3.2 2.6,-5.8 5.8,-5.8z"
+                    fill="#F47D20"
+                  />
+                </g>
+                <path
+                  d="m217.9,70.9l-12.7,0l-12.6,0l-7.9,0c-4.3,0 -7.8,3.6 -7.8,8l0,33.8l0,25.3l0,15c0,4.4 3.5,8 7.8,8l33.3,0c4.3,0 7.8,-3.6 7.8,-8l0,-74.1c-0.2,-4.4 -3.6,-8 -7.9,-8zm-21.6,7.8l8.9,0l1,0l0,2l-1,0l-8.9,0l0,-2zm4.9,78.5c-2.2,0 -3.9,-1.8 -3.9,-3.9s1.8,-3.9 3.9,-3.9s3.9,1.8 3.9,3.9s-1.7,3.9 -3.9,3.9zm18.6,-10.8l-37.2,0l0,-8.5l0,-25.3l0,-24.8l9.9,0l12.6,0l14.7,0l0,58.6z"
+                  fill="#F47D20"
+                  id="path-1"
+                />
+              </g>
+            </g>
+          </svg>
+          <h2 class="heading-secondary priorities__box--heading">Responsive</h2>
+          <p class="priorities--desc">
+            Internet traffic from mobile devices is constantly increasing. This
+            is why I carefully test that all websites are responsive and can
+            perform on all devices no matter what their size.
+          </p>
+        </div>
+
+        <!-- DYNAMIC ICON SECTION -->
+        <div class="priorities__box" data-aos="zoom-in-up">
+          <svg
+            class="icon"
+            width="123.9"
+            height="210"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <rect fill="none" height="402" width="582" y="-1" x="-1" />
+            </g>
+            <g>
+              <title>Layer 1</title>
+              <g id="svg_1">
+                <path
+                  d="m20.7,19.6c-18,22.5 -14.4,55.6 8.1,73.7c5.8,4.6 12.2,7.8 19,9.7c0.2,-3.1 0.3,-6.2 0.5,-9.4c-4.9,-1.6 -9.5,-4 -13.7,-7.4c-18.6,-15 -21.6,-42.3 -6.7,-60.9c14.9,-18.5 42.2,-21.5 60.7,-6.6c18.6,14.9 21.6,42.1 6.7,60.7c-5.2,6.4 -11.8,11 -19.1,13.6c0,1.5 0.1,3.1 0.2,4.6c0.1,1.7 0.1,3.3 0.2,5c9.9,-2.9 19,-8.8 25.9,-17.4c18.1,-22.5 14.4,-55.6 -8.1,-73.7c-22.5,-18.1 -55.6,-14.4 -73.7,8.1z"
+                  id="svg_3"
+                  fill="#F47D20"
+                />
+                <path
+                  id="svg_2"
+                  d="m62.5,57.4c-2.9,0.2 -5.4,1.4 -6.9,3.2l-0.1,0.1c-1.8,2.3 -2.2,10.9 -2.4,15.9c0,0.1 0,0.3 0,0.4c-0.1,1.7 -0.1,3.1 -0.2,4.2c0,0.5 -0.1,1 -0.1,1.5c-0.4,4.1 -0.6,8 -0.9,11.8c-0.2,3.1 -0.3,6.2 -0.5,9.3c0,0.1 0,0.1 0,0.2c-0.4,6.8 -0.7,13.8 -1.4,21.6c-0.1,0.6 -0.1,1.2 -0.2,1.9c-0.6,7 -1.3,15.8 -5.5,20.3c-2.8,3 -5.7,4.2 -8.6,3.6c-6.4,-1.2 -10.3,-11 -12.4,-16.3c-0.3,-0.8 -0.6,-1.5 -0.8,-2c-0.7,-1.4 -1.2,-3 -1.8,-4.5c-1.7,-4.3 -3.4,-8.8 -6.7,-11c-2.3,-1.5 -9.4,-1.2 -12.5,2.8c-0.8,1 -1.3,2.2 -1.5,3.6c-0.1,4.5 2.6,10.4 5.3,16.1c1.1,2.3 2.2,4.6 3.1,6.8c6.8,16.7 12.5,30.7 18.9,46.2c3.5,8.6 15.2,30.7 21.9,34.6c8.1,4.8 33.1,4 40.5,3.2c5.9,-0.6 6.8,-4.6 12.8,-12.1c5.3,-6.6 13.5,-29.2 14.5,-32.5c2.5,-8.1 5,-16.5 6.1,-25.8c0.6,-5.5 2.5,-22.1 -2.7,-33c-5.6,-11.9 -18.8,-12.7 -26.6,-13.2l-0.5,0c-7.3,-0.4 -8.9,-0.3 -11.3,-0.2c-1.5,0.1 -3.4,0.2 -7.2,0.3l-1.9,0l0.1,-1.9c0.1,-3 0.1,-6 0,-8.9c-0.1,-1.9 -0.1,-3.8 -0.2,-5.8c0,-1.2 -0.1,-2.4 -0.1,-3.6c-0.1,-2.8 -0.2,-5.6 -0.2,-8.7c0,-1.1 0.1,-2.2 0.2,-3.4c0.1,-1.1 0.2,-2.3 0.3,-3.5c0.1,-0.9 0.2,-1.9 0.3,-2.8c0.5,-6 0.7,-12.7 -2.6,-15.8c-2.1,-1.9 -5,-2.8 -8.2,-2.6z"
+                  fill="#F47D20"
+                />
+                <path
+                  id="svg_4"
+                  d="m81.4,27.7c-13.6,-10.9 -33.5,-8.7 -44.4,4.9c-10.9,13.6 -8.7,33.5 4.9,44.4c2.3,1.8 4.8,3.3 7.4,4.4c0,-0.2 0,-0.3 0,-0.5c0.1,-1.1 0.2,-2.7 0.2,-4.4c0,-0.3 0,-0.7 0,-1c-1.5,-0.8 -2.9,-1.7 -4.2,-2.8c-11.2,-9 -13,-25.4 -4,-36.6c9,-11.2 25.4,-13 36.6,-4c11.2,9 13,25.4 4,36.6c-1.5,1.8 -3.1,3.4 -4.9,4.7c-0.6,0.5 -1.3,0.9 -1.9,1.3c-0.2,2.3 -0.4,4.5 -0.6,6.5c0.7,-0.3 1.3,-0.6 1.9,-0.9c3.7,-2 7,-4.7 9.8,-8.1c10.9,-13.7 8.8,-33.6 -4.8,-44.5z"
+                  fill="#F47D20"
+                />
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="heading-secondary priorities__box--heading">Dynamic</h2>
+          <p class="priorities--desc">
+            Use of animation makes the website experience more exciting and
+            interactive.
+          </p>
+        </div>
+      </div>
+
+      <div class="projects__intro" id="projects">
+        <h1 class="heading-primary heading-orange">Projects</h1>
+        <picture class="projects__intro--img">
+          <source
+            srcset="assets/images-sm/superimposed346w.jpg"
+            media="(max-width: 47.5em)"
+          />
+          <source
+            srcset="assets/images-sm/superimposed600w.jpg"
+            media="(max-width: 64em)"
+          />
+          <source
+            srcset="assets/images-md/superimposed840w.jpg"
+            media="(min-width: 64.01em)"
+          />
+
+          <img
+            src="assets/images-md/superimposed840w.jpg"
+            alt="Websites responsive on all devices"
+          />
         </picture>
-        <p class="paragraph  color-primary projects__details--summary">This is a fictitious web survey made to collect
-          data from the users to help 'BMW' improve future products and help with client satisfaction. This survey asks
-          sets of
-          questions and proceeds to the following steps depending on the user's answers. All data submitted is then
-          saved in 'LocalStorage'. For this project I depicted the statistics using graphs to ensure that the
-          information in clearly and easily recorded.</p>
-        <div class="projects__links">
-          <div class="projects__links--container" data-aos="fade-down" data-aos-duration="600" data-aos-offset="50">
-            <h4 class="projects__links--learn" data-reference="bmwOverlay">Project details</h4>
-            <a target="_blank" href="https://upbeat-raman-e69fc5.netlify.com/" class="projects__links--visit">Visit
-              Website</a>
-          </div>
-        </div>
-
-        <div class="projects__overlay projects__overlay--bmw" id="bmwOverlay"></div>
-        <div class="projects__overlay__line projects__overlay__line--y" data-aos="fade-down" data-aos-duration="600"
-          data-aos-offset="250"></div>
-        <div class="projects__overlay__line projects__overlay__line--x" data-aos="fade-left" data-aos-duration="600"
-          data-aos-offset="50"></div>
+        <a href="#project--1" class="projects__intro--link"
+          ><img
+            src="assets/icons/icon-arrow.svg"
+            alt="Continue and preview Stefan's latest projects"
+            class="down--arrow"
+        /></a>
       </div>
-    </div>
 
-    <!-- <div class="projects__desc projects--blue" id="project--5">
+      <div class="projects__desc projects--grey" id="project--1">
+        <nav class="projects__nav" data-aos="fade-down">
+          <ul class="projects__nav--list">
+            <li class="projects__nav__li">
+              <a href="#project--1" class="projects__nav__li--link">
+                <div
+                  class="projects__nav__li--line projects__nav__li--selected"
+                ></div>
+                <div class="projects__nav__li__number">
+                  1&sol;<span class="projects__nav__li__number--last">5</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--2" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  2&sol;<span class="projects__nav__li__number--last">5</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--3" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  3&sol;<span class="projects__nav__li__number--last">5</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--4" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  4&sol;<span class="projects__nav__li__number--last">5</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--4" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  5&sol;<span class="projects__nav__li__number--last">5</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="projects__details">
+          <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
+          <div class="projects__details--first--row--grey">
+            <img
+              src="assets/icons/icon-arrow-fixed.svg"
+              class="projects__details--arrow"
+              data-reference="surveyOverlay"
+              alt="Click to go back"
+            />
+          </div>
+          <h2 class="heading-secondary projects__details--heading">
+            Dynamic Survey
+          </h2>
+          <div
+            class="projects__details--img projects__details--img--survey"
+          ></div>
+          <!-- Picture element used for screens smaller than 64em only -->
+          <picture class="projects__details--img--mobile">
+            <!-- <source srcset="assets/images-sm/jmb-400w.jpg" media="(max-width: 47.5em)">
+          <source srcset="assets/images-sm/jmb-680w.jpg" media="(max-width: 64em)"> -->
+            <img
+              src="assets/images-sm/dynamic-survey-mobile-screenshot.jpg"
+              alt="Dynamic survey dashboard screenshot"
+            />
+          </picture>
+          <div class="projects__details--summary">
+            <p class="paragraph color-primary">
+              This project demonstrates a custom solution that
+              collects information from customers. The survey asks
+              questions dynamically depending on the participant's response for
+              example if the participant is under eighteen the survey will save
+              the data and end immediately otherwise if the user is aged between
+              eighteen and twenty-five a bonus question will be asked in the
+              next set of questions. The survey also includes input validation
+              with error messages. To ensure the best user experience I also
+              made use of charts to display the data. This project was
+              built with: React, React Hook Form, Redux, Material-UI, npm, and
+              Chart.js.
+            </p>
+          </div>
+          <div class="projects__links">
+            <div
+              class="projects__links--container"
+              data-aos="fade-down"
+              data-aos-duration="600"
+              data-aos-offset="50"
+            >
+              <h4 class="projects__links--learn" data-reference="surveyOverlay">
+                Project details
+              </h4>
+              <a
+                target="_blank"
+                href="https://60c2293c6a4f4900a75b6ff7--reverent-newton-14aa38.netlify.app/"
+                class="projects__links--visit"
+                >Visit Website</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="projects__overlay projects__overlay--survey"
+            id="surveyOverlay"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--y"
+            data-aos="fade-down"
+            data-aos-duration="600"
+            data-aos-offset="250"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--x"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-offset="50"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Dynamic Survey End -->
+
+      <div class="projects__desc projects--blue" id="project--1">
+        <nav class="projects__nav" data-aos="fade-down">
+          <ul class="projects__nav--list">
+            <li class="projects__nav__li">
+              <a href="#project--1" class="projects__nav__li--link">
+                <div
+                  class="projects__nav__li--line projects__nav__li--selected"
+                ></div>
+                <div class="projects__nav__li__number">
+                  1&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--2" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  2&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--3" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  3&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--4" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  4&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="projects__details">
+          <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
+          <div class="projects__details--first--row--blue">
+            <img
+              src="assets/icons/icon-arrow-fixed.svg"
+              class="projects__details--arrow"
+              data-reference="cadOverlay"
+              alt="Click to go back"
+            />
+          </div>
+          <h2 class="heading-secondary projects__details--heading">
+            CAD Point Malta
+          </h2>
+          <div class="projects__details--img projects__details--img--cad"></div>
+          <!-- Picture element used for screens smaller than 64em only -->
+          <picture class="projects__details--img--mobile">
+            <!-- <source srcset="assets/images-sm/jmb-400w.jpg" media="(max-width: 47.5em)">
+          <source srcset="assets/images-sm/jmb-680w.jpg" media="(max-width: 64em)"> -->
+            <img
+              src="assets/images-sm/vray-maya-screenshot-mob.jpg"
+              alt="CAD point malta V-ray for Maya product screenshot"
+            />
+          </picture>
+          <div class="projects__details--summary">
+            <p class="paragraph color-primary">
+              I was approached by CADPoint Malta who needed a website revamp for
+              their business. This project was a custom developed e-commerce
+              website, where I was responsible for all web development.CadPoint
+              Malta consists of selling subscriptions of software products for
+              Autodesk, Adobe and V-Ray. It also offers training in specific
+              software. This website was developed to work seamlessly on mobile,
+              tablet and desktop screens.
+            </p>
+          </div>
+          <div class="projects__links">
+            <div
+              class="projects__links--container"
+              data-aos="fade-down"
+              data-aos-duration="600"
+              data-aos-offset="50"
+            >
+              <h4 class="projects__links--learn" data-reference="cadOverlay">
+                Project details
+              </h4>
+              <a
+                target="_blank"
+                href="https://cadpoint-malta.com"
+                class="projects__links--visit"
+                >Visit Website</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="projects__overlay projects__overlay--cad"
+            id="cadOverlay"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--y"
+            data-aos="fade-down"
+            data-aos-duration="600"
+            data-aos-offset="250"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--x"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-offset="50"
+          ></div>
+        </div>
+      </div>
+      <!-- Cad point End -->
+      <!-- JMB -->
+      <div class="projects__desc projects--grey" id="project--2">
+        <nav class="projects__nav" data-aos="fade-down">
+          <ul class="projects__nav--list">
+            <li class="projects__nav__li">
+              <a href="#project--1" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  1&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--2" class="projects__nav__li--link">
+                <div
+                  class="projects__nav__li--line projects__nav__li--selected"
+                ></div>
+                <div class="projects__nav__li__number">
+                  2&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--3" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  3&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--4" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  4&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="projects__details">
+          <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
+          <div class="projects__details--first--row--grey">
+            <img
+              src="assets/icons/icon-arrow-fixed.svg"
+              class="projects__details--arrow"
+              data-reference="jmbOverlay"
+              alt="Click to go back"
+            />
+          </div>
+          <h2 class="heading-secondary projects__details--heading">
+            John martin borg
+          </h2>
+          <div class="projects__details--img projects__details--img--jmb"></div>
+          <!-- Picture element used for screens smaller than 64em only -->
+          <picture class="projects__details--img--mobile">
+            <source
+              srcset="assets/images-sm/jmb-400w.jpg"
+              media="(max-width: 47.5em)"
+            />
+            <source
+              srcset="assets/images-sm/jmb-680w.jpg"
+              media="(max-width: 64em)"
+            />
+            <img
+              src="assets/images-sm/jmb-680w.jpg"
+              alt="John Martin Borg landing page screenshot"
+            />
+          </picture>
+
+          <p class="paragraph color-primary projects__details--summary">
+            This website illustrates a portfolio for the Maltese artist, John
+            Martin Borg. It showcases a selection of the artist's beautiful
+            works. After the theme was completed I integrated the website with
+            WordPress CMS using 'PHP'. The design was handed to me as a mockup
+            which I then then developed into fully functioning website.
+          </p>
+          <div class="projects__links">
+            <div
+              class="projects__links--container"
+              data-aos="fade-down"
+              data-aos-duration="600"
+              data-aos-offset="50"
+            >
+              <h4 class="projects__links--learn" data-reference="jmbOverlay">
+                Project details
+              </h4>
+              <a
+                target="_blank"
+                href="https://johnmartinborg.com"
+                class="projects__links--visit"
+                >Visit Website</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="projects__overlay projects__overlay--jmb"
+            id="jmbOverlay"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--y"
+            data-aos="fade-down"
+            data-aos-duration="600"
+            data-aos-offset="250"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--x"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-offset="50"
+          ></div>
+        </div>
+      </div>
+      <!-- The Sandwich House -->
+      <div class="projects__desc projects--blue" id="project--3">
+        <nav class="projects__nav" data-aos="fade-down">
+          <ul class="projects__nav--list">
+            <li class="projects__nav__li">
+              <a href="#project--1" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  1&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--2" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  2&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--3" class="projects__nav__li--link">
+                <div
+                  class="projects__nav__li--line projects__nav__li--selected"
+                ></div>
+                <div class="projects__nav__li__number">
+                  3&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--4" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  4&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="projects__details">
+          <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
+          <div class="projects__details--first--row--blue">
+            <img
+              src="assets/icons/icon-arrow-fixed.svg"
+              class="projects__details--arrow"
+              data-reference="sandwichOverlay"
+              alt="Click to go back"
+            />
+          </div>
+          <h2 class="heading-secondary projects__details--heading">
+            The Sandwich House
+          </h2>
+          <div class="projects__details--img projects__details--img--tsh"></div>
+          <!-- Picture element used for screens smaller than 64em only -->
+          <picture class="projects__details--img--mobile">
+            <source
+              srcset="assets/images-sm/sandwich-house-400w.jpg"
+              media="(max-width: 47.5em)"
+            />
+            <source
+              srcset="assets/images-sm/sandwich-house-680w.jpg"
+              media="(max-width: 64em)"
+            />
+            <img
+              src="assets/images-sm/sandwich-house-680w.jpg"
+              alt="The Sandwich House branding"
+            />
+          </picture>
+          <p class="paragraph projects__details--summary color-primary">
+            This is a fictitious website called ‘The Sandwich House’. This
+            website portrays an online business targeting customers interested
+            in ordering a sandwich or sandwiches from the comfort of their home
+            or office. The design of the website allows the user to put together
+            the customer’s preferred choice of sandwich. Once the order is
+            complete they will have it delivered to them.
+          </p>
+
+          <div class="projects__links">
+            <div
+              class="projects__links--container"
+              data-aos="fade-down"
+              data-aos-duration="600"
+              data-aos-offset="50"
+            >
+              <h4
+                class="projects__links--learn"
+                data-reference="sandwichOverlay"
+              >
+                Project details
+              </h4>
+              <a
+                target="_blank"
+                href="https://stefan320.github.io/sandwich-house/"
+                class="projects__links--visit"
+                >Visit Website</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="projects__overlay projects__overlay--sandwich"
+            id="sandwichOverlay"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--y"
+            data-aos="fade-down"
+            data-aos-duration="600"
+            data-aos-offset="250"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--x"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-offset="50"
+          ></div>
+        </div>
+      </div>
+      <!-- BMW -->
+      <div class="projects__desc projects--grey" id="project--4">
+        <nav class="projects__nav" data-aos="fade-down">
+          <ul class="projects__nav--list">
+            <li class="projects__nav__li">
+              <a href="#project--1" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  1&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--2" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  2&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--3" class="projects__nav__li--link">
+                <div class="projects__nav__li--line"></div>
+                <div class="projects__nav__li__number">
+                  3&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+            <li class="projects__nav__li">
+              <a href="#project--4" class="projects__nav__li--link">
+                <div
+                  class="projects__nav__li--line projects__nav__li--selected"
+                ></div>
+                <div class="projects__nav__li__number">
+                  4&sol;<span class="projects__nav__li__number--last">4</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="projects__details">
+          <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
+          <div class="projects__details--first--row--grey">
+            <img
+              src="assets/icons/icon-arrow-fixed.svg"
+              class="projects__details--arrow"
+              data-reference="bmwOverlay"
+              alt="Click to go back"
+            />
+          </div>
+          <h2 class="heading-secondary projects__details--heading">
+            BMW Survey
+          </h2>
+          <div class="projects__details--img projects__details--img--bmw"></div>
+          <picture class="projects__details--img--mobile">
+            <source
+              srcset="assets/images-sm/bmw-400w.jpg"
+              media="(max-width: 47.5em)"
+            />
+            <source
+              srcset="assets/images-sm/bmw-680w.jpg"
+              media="(min-width: 47.6em)"
+            />
+            <img src="assets/images-sm/bmw-680w.jpg" alt="BMW interior" />
+          </picture>
+          <p class="paragraph color-primary projects__details--summary">
+            This is a fictitious web survey made to collect data from the users
+            to help 'BMW' improve future products and help with client
+            satisfaction. This survey asks sets of questions and proceeds to the
+            following steps depending on the user's answers. All data submitted
+            is then saved in 'LocalStorage'. For this project I depicted the
+            statistics using graphs to ensure that the information in clearly
+            and easily recorded.
+          </p>
+          <div class="projects__links">
+            <div
+              class="projects__links--container"
+              data-aos="fade-down"
+              data-aos-duration="600"
+              data-aos-offset="50"
+            >
+              <h4 class="projects__links--learn" data-reference="bmwOverlay">
+                Project details
+              </h4>
+              <a
+                target="_blank"
+                href="https://upbeat-raman-e69fc5.netlify.com/"
+                class="projects__links--visit"
+                >Visit Website</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="projects__overlay projects__overlay--bmw"
+            id="bmwOverlay"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--y"
+            data-aos="fade-down"
+            data-aos-duration="600"
+            data-aos-offset="250"
+          ></div>
+          <div
+            class="projects__overlay__line projects__overlay__line--x"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-offset="50"
+          ></div>
+        </div>
+      </div>
+
+      <!-- <div class="projects__desc projects--blue" id="project--5">
       <nav class="projects__nav" data-aos="fade-down">
         <ul class="projects__nav--list">
           <li class="projects__nav__li">
             <a href="#project--1" class="projects__nav__li--link">
               <div class="projects__nav__li--line"></div>
               <div class="projects__nav__li__number">
-                1&sol;<span class="projects__nav__li__number--last">5</span>
+                1&sol;<span class="projects__nav__li__number--last">4</span>
               </div>
             </a>
           </li>
@@ -554,7 +1005,7 @@
             <a href="#project--2" class="projects__nav__li--link">
               <div class="projects__nav__li--line"></div>
               <div class="projects__nav__li__number">
-                2&sol;<span class="projects__nav__li__number--last">5</span>
+                2&sol;<span class="projects__nav__li__number--last">4</span>
               </div>
             </a>
           </li>
@@ -562,7 +1013,7 @@
             <a href="#project--3" class="projects__nav__li--link">
               <div class="projects__nav__li--line"></div>
               <div class="projects__nav__li__number">
-                3&sol;<span class="projects__nav__li__number--last">5</span>
+                3&sol;<span class="projects__nav__li__number--last">4</span>
               </div>
             </a>
           </li>
@@ -570,7 +1021,7 @@
             <a href="#project--4" class="projects__nav__li--link">
               <div class="projects__nav__li--line"></div>
               <div class="projects__nav__li__number">
-                4&sol;<span class="projects__nav__li__number--last">5</span>
+                4&sol;<span class="projects__nav__li__number--last">4</span>
               </div>
             </a>
           </li>
@@ -578,15 +1029,15 @@
             <a href="#project--5" class="projects__nav__li--link">
               <div class="projects__nav__li--line projects__nav__li--selected"></div>
               <div class="projects__nav__li__number">
-                5&sol;<span class="projects__nav__li__number--last">5</span>
+                5&sol;<span class="projects__nav__li__number--last">4</span>
               </div>
             </a>
           </li>
         </ul>
       </nav> -->
-    <!-- <div class="projects__details"> -->
-    <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
-    <!-- <div class="projects__details--first--row--blue">
+      <!-- <div class="projects__details"> -->
+      <!-- USED TO FILL THE FIRST ROW OF THE GRID WITH DIFFERENT BACKGROUND -->
+      <!-- <div class="projects__details--first--row--blue">
           <img src="assets/icons/icon-arrow-fixed.svg" class="projects__details--arrow" data-reference="blogOverlay"
             alt="Click to go back">
         </div>
@@ -620,40 +1071,66 @@
           data-aos-offset="50"></div>
       </div>
     </div> -->
-  </main>
+    </main>
 
-  <div class="contact" id="contact">
-    <h1 class="heading-primary">CONTACT</h1>
-    <h4 class="contact--heading">Have a question, a new project in mind or an inquiry?</h4>
-    <div class="contact__info">
-      <a href="tel:+35679785975" class="contact__info--link">+356 79785975</a>
-      <span class="contact__info--seperator">&vert;</span>
-      <a target="_blank" href="mailto:stefann320@gmail.com" class="contact__info--link">stefann320@gmail.com</a>
+    <div class="contact" id="contact">
+      <h1 class="heading-primary">CONTACT</h1>
+      <h4 class="contact--heading">
+        Have a question, a new project in mind or an inquiry?
+      </h4>
+      <div class="contact__info">
+        <a href="tel:+35679785975" class="contact__info--link">+356 79785975</a>
+        <span class="contact__info--seperator">&vert;</span>
+        <a
+          target="_blank"
+          href="mailto:stefann320@gmail.com"
+          class="contact__info--link"
+          >stefann320@gmail.com</a
+        >
+      </div>
+      <form action="POST" data-netlify="true" class="contact__form">
+        <label for="contact--name" class="contact__form--label">Name</label>
+        <input
+          type="text"
+          name="name"
+          class="contact__form--input"
+          id="contact--name"
+          required
+        />
+
+        <label for="contact--email" class="contact__form--label">Email</label>
+        <input
+          type="text"
+          name="email"
+          class="contact__form--input"
+          id="contact--email"
+          required
+        />
+
+        <label for="contact--message" class="contact__form--label"
+          >Message</label
+        >
+        <textarea
+          name="message"
+          class="contact__form--textarea"
+          id="contact--message"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+        <button type="submit" class="contact__form--submit">Send</button>
+      </form>
     </div>
-    <form action="POST" data-netlify="true" class="contact__form">
-      <label for="contact--name" class="contact__form--label">Name</label>
-      <input type="text" name="name" class="contact__form--input" id="contact--name" required>
 
-      <label for="contact--email" class="contact__form--label">Email</label>
-      <input type="text" name="email" class="contact__form--input" id="contact--email" required>
-
-      <label for="contact--message" class="contact__form--label">Message</label>
-      <textarea name="message" class="contact__form--textarea" id="contact--message" cols="30" rows="10"
-        required></textarea>
-      <button type="submit" class="contact__form--submit">Send</button>
-    </form>
-  </div>
-
-  <footer class="footer">
-    <!-- 2019 is replaced dynamicaly from index.js to the current year -->
-    <div class="footer__text">
-      &copy; 2021 &vert; All Rights Reserved &vert; Stefan Cutajar
-    </div>
-  </footer>
-  <script src="js/index.js"></script>
-  <script src="js/canvas.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="js/animations.js"></script>
-</body>
-
+    <footer class="footer">
+      <!-- 2019 is replaced dynamicaly from index.js to the current year -->
+      <div class="footer__text">
+        &copy; 2021 &vert; All Rights Reserved &vert; Stefan Cutajar
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
 </html>
